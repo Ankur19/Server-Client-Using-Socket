@@ -1,4 +1,5 @@
 #include "SerializationUtils.h"
+#include <algorithm>
 
 string SerializationUtils::serializeFileList(FileList& f){
     string result = "";
@@ -7,7 +8,7 @@ string SerializationUtils::serializeFileList(FileList& f){
     for(string& s: f.files){
         result+=s+"|";
     }
-    return string(result.begin(), result.end()-1);
+    return result;
 }
 
 void SerializationUtils::deserializeFileList(string fileList, FileList& f){
@@ -24,5 +25,13 @@ void SerializationUtils::deserializeFileList(string fileList, FileList& f){
         else{
             f.files.push_back(temp);
         }
+        i++;
     }
+    f.files.pop_back();
+}
+
+void SerializationUtils::rtrim(string &s) {
+    s.erase(find_if(s.rbegin(), s.rend(), [](unsigned char ch) {
+        return !isspace(ch) && ch!='0';
+    }).base(), s.end());
 }

@@ -1,7 +1,7 @@
 CC = g++
 CFLAGS = -g -Wall
 CPPVERSION = -std=c++17
-LDFLAGS = "-lstdc++fs"
+LDFLAGS = -lssl -lcrypto -lz -ldl -static-libgcc "-lstdc++fs"
 
 FileUtils.o : FileUtils/FileUtils.cpp FileUtils/FileUtils.h
 			${CC} ${CPPVERSION} -c FileUtils/FileUtils.cpp ${LDFLAGS}
@@ -12,11 +12,18 @@ SerializationUtils.o : SerializationUtils/SerializationUtils.cpp SerializationUt
 Server.o : Server.cpp
 			${CC} ${CPPVERSION} -c Server.cpp ${LDFLAGS}
 
-all : FileUtils.o SerializationUtils.o Server.o
-			${CC} ${CPPVERSION} ${CFLAGS} FileUtils.o SerializationUtils.o Server.o -o server ${LDFLAGS}
+Client.o : Client.cpp
+			${CC} ${CPPVERSION} -c Client.cpp ${LDFLAGS}
 
-run : server
+all : FileUtils.o SerializationUtils.o Server.o Client.o
+			${CC} ${CPPVERSION} ${CFLAGS} FileUtils.o SerializationUtils.o Server.o -o server ${LDFLAGS}
+			${CC} ${CPPVERSION} ${CFLAGS} FileUtils.o SerializationUtils.o Client.o -o client ${LDFLAGS}
+
+run-server : server
 			./server
 
+run-client : client
+			./client
+
 clean :
-			rm server *.o
+			rm server client *.o

@@ -4,4 +4,5 @@ class SerializationUtils{
     public:
         static string serializeFileList(FileList& f);
         static void deserializeFileList(string fileList, FileList& f);
+        static void rtrim(string &s);
 };

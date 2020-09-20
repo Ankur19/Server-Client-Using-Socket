@@ -2,6 +2,9 @@
 #include <string>
 #include <vector>
 #include <filesystem>
+#include <sys/stat.h>
+#include <sys/mman.h>
+#include <openssl/md5.h>
 
 using namespace std;
 namespace fs = filesystem;
@@ -18,5 +21,8 @@ class FileUtils{
     public:
         static string getPwd();
         static FileList* getFilesInDir(string dir);
+        static void printMd5Sum(unsigned char* md);
+        static unsigned long getSizeByFd(int fd);
+        static string getMd5ForFile(int fileDescriptor);
 };
 

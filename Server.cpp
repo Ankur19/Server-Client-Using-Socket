@@ -13,7 +13,7 @@
 
 using namespace std;
 
-#define PACKET_SIZE 1025
+#define PACKET_SIZE 1024
 #define LOCALHOST "127.0.0.1"
 #define PORT_NUMBER 50015
 #define MAX_CLIENTS 8
@@ -58,10 +58,10 @@ int main()
         cout << "Listening on: " << LOCALHOST << ":" << PORT_NUMBER << endl; 
 		cout << "PWD: " << FileUtils::getPwd() << endl;
 		if(!f){
-			f = FileUtils::getFilesInDir(FileUtils::getPwd());
+			f = FileUtils::getFilesInDir(FileUtils::getPwd() + "/ServerFolder");
 			serializedFile = SerializationUtils::serializeFileList(*f);
 		}
-		cout << "File serialized" << endl;
+
 		clintConnt = accept(clintListn, (struct sockaddr*)NULL, NULL);
 		cout << "Client Number: " << clintConnt << endl;
 
@@ -69,11 +69,11 @@ int main()
 		temp = (char* )malloc(size*sizeof(char));
 		memcpy(temp, serializedFile.c_str(), size);
 		while(size >0){
-			memset(dataSending, 0, PACKET_SIZE);
-			memcpy(dataSending, temp, PACKET_SIZE-1);
+			memset(dataSending, '\0', PACKET_SIZE);
+			memcpy(dataSending, temp, PACKET_SIZE);
 			write(clintConnt, dataSending, strlen(dataSending));
-			temp+=PACKET_SIZE-1;
-			size-=PACKET_SIZE-1;
+			temp+=PACKET_SIZE;
+			size-=PACKET_SIZE;
 		}
 
         close(clintConnt);
