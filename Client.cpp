@@ -50,6 +50,8 @@ int main()
     }
 
     SerializationUtils::deserializeFileList(tempString, f);
+    for(string md: f.md5)
+        cout << md << endl;
     cout << "Files in the folder: " << endl;
     for(int i=0; i<f.numFiles; i++){
         cout << '\t' << i+1 << '\t' << f.files[i] << endl;

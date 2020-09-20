@@ -5,8 +5,8 @@ string SerializationUtils::serializeFileList(FileList& f){
     string result = "";
     result+=to_string(f.numFiles) + "|";
     result+=f.directory + "|";
-    for(string& s: f.files){
-        result+=s+"|";
+    for(int i = 0; i<f.files.size(); i++){
+        result+=f.files[i] + "|" + f.md5[i] + "|";
     }
     return result;
 }
@@ -14,6 +14,7 @@ string SerializationUtils::serializeFileList(FileList& f){
 void SerializationUtils::deserializeFileList(string fileList, FileList& f){
     istringstream ss(fileList);
     string temp;
+    bool first = true;
     int i = 0;
     while(getline(ss, temp, '|')){
         if(i==0){
@@ -23,7 +24,14 @@ void SerializationUtils::deserializeFileList(string fileList, FileList& f){
             f.directory = temp;
         }
         else{
-            f.files.push_back(temp);
+            if(first){
+                f.files.push_back(temp);
+                first = false;
+            }
+            else{
+                f.md5.push_back(temp);
+                first = true;
+            }
         }
         i++;
     }

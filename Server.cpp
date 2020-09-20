@@ -58,7 +58,7 @@ int main()
         cout << "Listening on: " << LOCALHOST << ":" << PORT_NUMBER << endl; 
 		cout << "PWD: " << FileUtils::getPwd() << endl;
 		if(!f){
-			f = FileUtils::getFilesInDir(FileUtils::getPwd() + "/ServerFolder");
+			f = FileUtils::getFilesInDir(FileUtils::getPwd() );
 			serializedFile = SerializationUtils::serializeFileList(*f);
 		}
 
@@ -75,7 +75,6 @@ int main()
 			temp+=PACKET_SIZE;
 			size-=PACKET_SIZE;
 		}
-
         close(clintConnt);
         sleep(1);
      }
