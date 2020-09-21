@@ -12,17 +12,16 @@
 using namespace std;
 namespace fs = filesystem;
 
-struct FileList{
-    int numFiles;
-    string directory;
-    vector<string> files;
-    vector<string> md5;
-    FileList() : numFiles(0), directory(""), files(vector<string>{}), md5(vector<string>{}) {};
-    FileList(int numberOfFiles, string dir, vector<string> fileList, vector<string> md5s) : numFiles(numberOfFiles), directory(dir), files(fileList), md5(md5s) {};
-};
-
 class FileUtils{
     public:
+        struct FileList{
+            int numFiles;
+            string directory;
+            vector<string> files;
+            vector<string> md5;
+            FileList() : numFiles(0), directory(""), files(vector<string>{}), md5(vector<string>{}) {};
+            FileList(int numberOfFiles, string dir, vector<string> fileList, vector<string> md5s) : numFiles(numberOfFiles), directory(dir), files(fileList), md5(md5s) {};
+        };
         static string getPwd();
         static FileList* getFilesInDir(string dir);
         static void printMd5Sum(unsigned char* md);

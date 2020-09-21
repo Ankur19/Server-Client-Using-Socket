@@ -9,11 +9,12 @@
 #include <sys/socket.h> // For socket creation
 #include <netinet/in.h> // Contains constants and structures needed for internet domain addresses
 #include <bits/stdc++.h> // Standard C++ functionality
-#include "SerializationUtils/SerializationUtils.h"
+#include "TransferUtils/TransferUtils.h"
 
 using namespace std;
 
 #define PACKET_SIZE 1024
+#define SIZE_PACKET_SIZE 8
 #define LOCALHOST "127.0.0.1"
 #define PORT_NUMBER 50015
 #define MAX_CLIENTS 8
@@ -49,7 +50,7 @@ int main()
     // Finally listen to the port provided
 	listen(clintListn , MAX_CLIENTS);
 
-    FileList* f = nullptr;
+    FileUtils::FileList* f = nullptr;
 	string serializedFile = "";
 	char* temp;
 	int start;
@@ -67,37 +68,23 @@ int main()
 		clintConnt = accept(clintListn, (struct sockaddr*)NULL, NULL);
 		cout << "Client Number: " << clintConnt << endl;
 
-		size = serializedFile.size();
-		temp = (char* )malloc(size*sizeof(char));
-		memcpy(temp, serializedFile.c_str(), size);
-		while(size > 0){
-			memset(dataSending, '\0', PACKET_SIZE);
-			memcpy(dataSending, temp, PACKET_SIZE);
-			write(clintConnt, dataSending, strlen(dataSending));
-			temp+=PACKET_SIZE;
-			size-=PACKET_SIZE;
-		}
-		tempString = "";
-		while(1){
-			cout << "Waiting for response from client" << endl;
-			memset(dataReceiving, '\0', PACKET_SIZE);
-			recv(clintConnt, dataReceiving, PACKET_SIZE, 0);
-			tempString+=string(dataReceiving);
-			SerializationUtils::rtrim(tempString);
-			n = stoi(tempString);
-			if(n>=1 && n <= f->numFiles)
-				break;
-			else{
-				cout << "Invalid request from client." << endl;
-				break;
-			}
-		}
-		fd = open(f->files[n-1].c_str(), O_RDONLY);
-		while((n = read(fd, dataReceiving, sizeof(dataReceiving))) > 0){
-			write(clintConnt, dataReceiving, sizeof(dataReceiving));
-		}
-		close(fd);
+		TransferUtils::sendFile(serializedFile, clintConnt);
 
+		cout << "File Info sent" << endl;
+
+		tempString = "";
+		cout << "Waiting for response from client" << endl;
+		
+		n = TransferUtils::receiveSize(clintConnt);
+		
+		cout << "Received file number: " << n << endl;
+		if(n <=0 || n> f->numFiles){
+			cout << "Invalid request from client." << endl;
+			break;
+		}
+
+		TransferUtils::sendCustomFile(f->files[n-1], clintConnt);
+		cout << "File sent to client" << endl;
         close(clintConnt);
      }
  

@@ -1,7 +1,7 @@
 #include "SerializationUtils.h"
 #include <algorithm>
 
-string SerializationUtils::serializeFileList(FileList& f){
+string SerializationUtils::serializeFileList(FileUtils::FileList& f){
     string result = "";
     result+=to_string(f.numFiles) + "|";
     result+=f.directory + "|";
@@ -11,7 +11,7 @@ string SerializationUtils::serializeFileList(FileList& f){
     return result;
 }
 
-void SerializationUtils::deserializeFileList(string fileList, FileList& f){
+void SerializationUtils::deserializeFileList(string& fileList, FileUtils::FileList& f){
     istringstream ss(fileList);
     string temp;
     bool first = true;
@@ -35,7 +35,6 @@ void SerializationUtils::deserializeFileList(string fileList, FileList& f){
         }
         i++;
     }
-    f.files.pop_back();
 }
 
 void SerializationUtils::rtrim(string &s) {

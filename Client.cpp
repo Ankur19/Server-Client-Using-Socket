@@ -9,14 +9,16 @@
 #include <errno.h>
 #include <arpa/inet.h>
 #include <bits/stdc++.h>
-#include "SerializationUtils/SerializationUtils.h"
+#include "TransferUtils/TransferUtils.h"
 
 using namespace std;
 
 #define PACKET_SIZE 1024
+#define SIZE_PACKET_SIZE 8
 #define LOCALHOST "127.0.0.1"
 #define PORT_NUMBER 50015
 #define MAX_CLIENTS 8
+
 
 int main()
 {
@@ -24,6 +26,7 @@ int main()
     char dataReceived[PACKET_SIZE];
     struct sockaddr_in ipOfServer;
     string tempString;
+    FileUtils::FileList f;
     
     memset(dataReceived, '0' ,sizeof(dataReceived));
 
@@ -42,12 +45,8 @@ int main()
         printf("Connection failed due to port and ip problems\n");
         return 1;
     }
-    tempString = "";
-    FileList f;
-    while((n = read(clientSocket, dataReceived, sizeof(dataReceived))) > 0)
-    {
-        tempString+= string(dataReceived);
-    }
+
+    TransferUtils::receiveFile(tempString, clientSocket);
 
     SerializationUtils::deserializeFileList(tempString, f);
     
@@ -58,7 +57,7 @@ int main()
 
     cout << endl;
     cout << "Which file number do you need?" << endl;
-    while(true){
+    while(1){
         cin >> n;
         if(n <=0 || n>f.numFiles){
             cout << "Incorrect entry. Try again." << endl;
@@ -69,20 +68,24 @@ int main()
     }
     cout << "Md5 for file " << f.files[n-1] << ": " << f.md5[n-1] << endl;
 
-    tempString = "";
-    memset(dataReceived, '0' ,sizeof(dataReceived));
-    while((n = read(clientSocket, dataReceived, sizeof(dataReceived))) > 0)
-    {
-        tempString+= string(dataReceived);
-    }
+    TransferUtils::sendSize(n, clientSocket);
 
-    SerializationUtils::rtrim(tempString);
+    cout << "Sent file number to server" << endl;
+    cout << "Receiving file..." << endl;
     
-    ofstream myfile("/ClientFolder/" + f.files[n-1].substr(f.directory.size()+1));
+    TransferUtils::receiveFile(tempString, clientSocket);
+    
+    FILE* file = fopen((FileUtils::getPwd() + "/ClientFolder/" + f.files[n-1].substr(f.directory.size()+1)).c_str(), "wb");
+    fwrite(tempString.c_str(), sizeof(char), tempString.size(), file);
+    fclose(file);
+    
+    /*ofstream myfile;
+    myfile.open(FileUtils::getPwd() + "/ClientFolder/" + f.files[n-1].substr(f.directory.size()+1));
     myfile << tempString;
-    myfile.close();
+    myfile.close();*/
 
-    n = open(("/ClientFolder/" + f.files[n-1].substr(f.directory.size()+1)).c_str(), O_RDONLY);
+    n = open((FileUtils::getPwd() + "/ClientFolder/" + f.files[n-1].substr(f.directory.size()+1)).c_str(), O_RDONLY);
+    cout << n << endl;
     struct stat newFileStat = FileUtils::getFileStat(n);
     cout << "Md5 for new file: " << FileUtils::getMd5ForFile(n, newFileStat.st_size) << endl;
     close(n);

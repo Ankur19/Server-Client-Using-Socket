@@ -4,7 +4,7 @@ string FileUtils::getPwd(){
     return fs::current_path();
 }
 
-FileList* FileUtils::getFilesInDir(string dir){
+FileUtils::FileList* FileUtils::getFilesInDir(string dir){
     FileList* f = new FileList();
     int fptr;
     f->directory = dir;
