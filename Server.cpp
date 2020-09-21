@@ -20,11 +20,13 @@ using namespace std;
 
 int main()
 {
-    // Instantiate char Array to be sent in response
+    // Instantiate char Array to be sent and received
 	char dataSending[PACKET_SIZE];
+	char dataReceiving[PACKET_SIZE];
+	string tempString = "";
 
     // Instantiate the Listener and Connection variables
-	int clintListn = 0, clintConnt = 0;
+	int clintListn = 0, clintConnt = 0, fd = 0, n = 0;
 
     // Instantiate the struct describing Internet Socket Address
 	struct sockaddr_in ipOfServer;
@@ -68,15 +70,35 @@ int main()
 		size = serializedFile.size();
 		temp = (char* )malloc(size*sizeof(char));
 		memcpy(temp, serializedFile.c_str(), size);
-		while(size >0){
+		while(size > 0){
 			memset(dataSending, '\0', PACKET_SIZE);
 			memcpy(dataSending, temp, PACKET_SIZE);
 			write(clintConnt, dataSending, strlen(dataSending));
 			temp+=PACKET_SIZE;
 			size-=PACKET_SIZE;
 		}
+		tempString = "";
+		while(1){
+			cout << "Waiting for response from client" << endl;
+			memset(dataReceiving, '\0', PACKET_SIZE);
+			recv(clintConnt, dataReceiving, PACKET_SIZE, 0);
+			tempString+=string(dataReceiving);
+			SerializationUtils::rtrim(tempString);
+			n = stoi(tempString);
+			if(n>=1 && n <= f->numFiles)
+				break;
+			else{
+				cout << "Invalid request from client." << endl;
+				break;
+			}
+		}
+		fd = open(f->files[n-1].c_str(), O_RDONLY);
+		while((n = read(fd, dataReceiving, sizeof(dataReceiving))) > 0){
+			write(clintConnt, dataReceiving, sizeof(dataReceiving));
+		}
+		close(fd);
+
         close(clintConnt);
-        sleep(1);
      }
  
      return 0;

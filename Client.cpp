@@ -20,14 +20,14 @@ using namespace std;
 
 int main()
 {
-    int CreateSocket = 0,n = 0;
+    int clientSocket = 0,n = 0;
     char dataReceived[PACKET_SIZE];
     struct sockaddr_in ipOfServer;
     string tempString;
     
     memset(dataReceived, '0' ,sizeof(dataReceived));
 
-    if((CreateSocket = socket(AF_INET, SOCK_STREAM, 0))< 0)
+    if((clientSocket = socket(AF_INET, SOCK_STREAM, 0))< 0)
     {
         printf("Socket not created \n");
         return 1;
@@ -37,39 +37,54 @@ int main()
     ipOfServer.sin_port = htons(PORT_NUMBER);
     ipOfServer.sin_addr.s_addr = inet_addr(LOCALHOST);
  
-    if((n = connect(CreateSocket, (struct sockaddr *)&ipOfServer, sizeof(ipOfServer)))<0)
+    if((n = connect(clientSocket, (struct sockaddr *)&ipOfServer, sizeof(ipOfServer)))<0)
     {
         printf("Connection failed due to port and ip problems\n");
         return 1;
     }
     tempString = "";
     FileList f;
-    while((n = read(CreateSocket, dataReceived, sizeof(dataReceived))) > 0)
+    while((n = read(clientSocket, dataReceived, sizeof(dataReceived))) > 0)
     {
         tempString+= string(dataReceived);
     }
 
     SerializationUtils::deserializeFileList(tempString, f);
-    for(string md: f.md5)
-        cout << md << endl;
+    
     cout << "Files in the folder: " << endl;
     for(int i=0; i<f.numFiles; i++){
         cout << '\t' << i+1 << '\t' << f.files[i] << endl;
     }
 
     cout << endl;
-    cout << "Which file number do you need? " << endl;
-    cin >> n;
-    cout << n << endl;
-    /*
-    ofstream myfile("ret.txt");
-    myfile << tempString;
-    myfile.close();*/
- 
-    if( n < 0)
-    {
-        printf("Standard input error \n");
+    cout << "Which file number do you need?" << endl;
+    while(true){
+        cin >> n;
+        if(n <=0 || n>f.numFiles){
+            cout << "Incorrect entry. Try again." << endl;
+        }
+        else{
+            break;
+        }
     }
- 
+    cout << "Md5 for file " << f.files[n-1] << ": " << f.md5[n-1] << endl;
+
+    tempString = "";
+    memset(dataReceived, '0' ,sizeof(dataReceived));
+    while((n = read(clientSocket, dataReceived, sizeof(dataReceived))) > 0)
+    {
+        tempString+= string(dataReceived);
+    }
+
+    SerializationUtils::rtrim(tempString);
+    
+    ofstream myfile("/ClientFolder/" + f.files[n-1].substr(f.directory.size()+1));
+    myfile << tempString;
+    myfile.close();
+
+    n = open(("/ClientFolder/" + f.files[n-1].substr(f.directory.size()+1)).c_str(), O_RDONLY);
+    struct stat newFileStat = FileUtils::getFileStat(n);
+    cout << "Md5 for new file: " << FileUtils::getMd5ForFile(n, newFileStat.st_size) << endl;
+    close(n);
     return 0;
 }
