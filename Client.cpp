@@ -66,10 +66,9 @@ int main()
             break;
         }
     }
-    cout << "Md5 for file " << f.files[n-1] << ": " << f.md5[n-1] << endl;
 
     TransferUtils::sendSize(n, clientSocket);
-
+    cout << "Md5 for old file: " << f.md5[n-1] << endl;
     cout << "Sent file number to server" << endl;
     cout << "Receiving file..." << endl;
     
@@ -78,16 +77,13 @@ int main()
     FILE* file = fopen((FileUtils::getPwd() + "/ClientFolder/" + f.files[n-1].substr(f.directory.size()+1)).c_str(), "wb");
     fwrite(tempString.c_str(), sizeof(char), tempString.size(), file);
     fclose(file);
-    
-    /*ofstream myfile;
-    myfile.open(FileUtils::getPwd() + "/ClientFolder/" + f.files[n-1].substr(f.directory.size()+1));
-    myfile << tempString;
-    myfile.close();*/
 
     n = open((FileUtils::getPwd() + "/ClientFolder/" + f.files[n-1].substr(f.directory.size()+1)).c_str(), O_RDONLY);
-    cout << n << endl;
+    
     struct stat newFileStat = FileUtils::getFileStat(n);
+    
     cout << "Md5 for new file: " << FileUtils::getMd5ForFile(n, newFileStat.st_size) << endl;
+    
     close(n);
     return 0;
 }
