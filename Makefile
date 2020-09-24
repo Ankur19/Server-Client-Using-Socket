@@ -23,7 +23,7 @@ all : FileUtils.o SerializationUtils.o TransferUtils.o Server.o Client.o
 			${CC} ${CPPVERSION} ${CFLAGS} FileUtils.o SerializationUtils.o TransferUtils.o Client.o -o client ${LDFLAGS}
 
 run-server : server
-			./server
+			./server $(PORT)
 
 run-client : client
 			./client

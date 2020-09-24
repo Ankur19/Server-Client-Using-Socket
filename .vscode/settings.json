@@ -30,6 +30,7 @@
         "vector": "cpp",
         "ostream": "cpp",
         "iostream": "cpp",
-        "filesystem": "cpp"
+        "filesystem": "cpp",
+        "thread": "cpp"
     }
 }
