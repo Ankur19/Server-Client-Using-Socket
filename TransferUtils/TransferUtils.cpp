@@ -103,9 +103,10 @@ vector<int> TransferUtils::sendFileSizes(vector<int> files, FileUtils::FileList*
     return sizes;
 }
 
-vector<FileUtils::FileInfo> TransferUtils::sendCustomFilesMultithreaded(int numFiles, FileUtils::FileList* f, int fileDescriptor){
+vector<FileUtils::FileInfo> TransferUtils::sendCustomFilesMultithreaded(int& numFiles, FileUtils::FileList* f, int fileDescriptor){
     vector<int> files;
     vector<int> sizes;
+    int threadIdx;
     vector<FileUtils::FileInfo> fileInfo;
 
     // Receive file numbers first
@@ -126,11 +127,17 @@ vector<FileUtils::FileInfo> TransferUtils::sendCustomFilesMultithreaded(int numF
         fileInfo[i].fileSize = sizes[i];
         fileInfo[i].fileIdx = i;
         fileInfo[i].fileDescriptor = fileDescriptor;
-        pthread_create(&threads[i], NULL, sendCustomFileWithIndex, (void*)&fileInfo[i]);
+        threadIdx = pthread_create(&threads[i], NULL, sendCustomFileWithIndex, (void*)&fileInfo[i]);
+        if (threadIdx) {
+			cout << "Error:unable to create thread," << threadIdx << endl;
+			exit(-1);
+		};
     }
     for(pthread_t pt: threads){
         pthread_join(pt, NULL);
     }
+    numFiles = receiveSize(fileDescriptor);
+    cout << "Sent all files. Need to resend: " << numFiles  << " files." << endl;
     return fileInfo;
 }
 
@@ -152,6 +159,7 @@ void* TransferUtils::sendCustomFileWithIndex(void* fileInfo){
     }
     time(&end);
     fInfo->timeToSend = difftime(end, start);
+    cout << "Sent: " << fInfo->charFileName << " in " << fInfo->timeToSend << " seconds" << endl;
     fclose(fd);
     free(fInfo->charFileName);
     pthread_exit(NULL);
@@ -173,10 +181,12 @@ void* TransferUtils::receiveCustomFileWithIndex(void* fileInfo){
             memcpy(fileIdx, dataReceiving, NUMBER_SIZE);
             n = stoi(string(fileIdx));
             fInfo->sizes[n]-=PACKET_SIZE-NUMBER_SIZE;
-            fwrite(dataReceiving+NUMBER_SIZE, sizeof(char), PACKET_SIZE-NUMBER_SIZE, fInfo->files[n]);
             if(fInfo->sizes[n] <=0){
+                fwrite(dataReceiving+NUMBER_SIZE, sizeof(char), fInfo->sizes[n] + (PACKET_SIZE-NUMBER_SIZE), fInfo->files[n]);
                 fclose(fInfo->files[n]);
-                pthread_exit(NULL);
+            }
+            else{
+                fwrite(dataReceiving+NUMBER_SIZE, sizeof(char), PACKET_SIZE-NUMBER_SIZE, fInfo->files[n]);
             }
         }
     }
@@ -184,12 +194,13 @@ void* TransferUtils::receiveCustomFileWithIndex(void* fileInfo){
     return nullptr;
 }
 
-vector<FileUtils::FileInfo> TransferUtils::receiveCustomFilesMultithreaded(FileUtils::FileList f, vector<int> files, int fileDescriptor){
+vector<FileUtils::FileInfo> TransferUtils::receiveCustomFilesMultithreaded(FileUtils::FileList& f, vector<int>& files, int fileDescriptor){
     vector<int> sizes;
     ThreadedFiles tf;
     pthread_t threads[files.size()];
     string newFileLocation;
     FILE* file;
+    int threadIdx;
 
     // Send file numbers
     for(int i: files){
@@ -211,10 +222,15 @@ vector<FileUtils::FileInfo> TransferUtils::receiveCustomFilesMultithreaded(FileU
         tf.fileInfo[i].fileName = newFileLocation;
         tf.fileInfo[i].fileIdx = i;
         tf.fileInfo[i].fileSize = sizes[i];
+        tf.fileInfo[i].fileMd5 = f.md5[files[i]-1];
         tf.fileDescriptor = fileDescriptor;
     }
     for(int i = 0; i<files.size();i++){
-        pthread_create(&threads[i], NULL, receiveCustomFileWithIndex, (void*)&tf);
+        threadIdx = pthread_create(&threads[i], NULL, receiveCustomFileWithIndex, (void*)&tf);
+        if (threadIdx) {
+			cout << "Error:unable to create thread," << threadIdx << endl;
+			exit(-1);
+		};
     }
     for(pthread_t pt: threads){
         pthread_join(pt, NULL);

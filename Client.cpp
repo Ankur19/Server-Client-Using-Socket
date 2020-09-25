@@ -14,11 +14,11 @@
 using namespace std;
 
 #define LOCALHOST "127.0.0.1"
-#define PORT_NUMBER 50015
 #define MAX_CLIENTS 8
+#define DOWNLOADS_REMAINING (int)20
 
 
-int main()
+int main(int argc, const char* argv[])
 {
     int clientSocket = 0,n = 0;
     char dataReceived[PACKET_SIZE];
@@ -27,7 +27,9 @@ int main()
     FileUtils::FileList f;
     vector<int> files;
     bool isValid;
-    
+    // Get port from main arguments
+	int port = stoi(argv[1]);
+
     memset(dataReceived, '0' ,sizeof(dataReceived));
 
     if((clientSocket = socket(AF_INET, SOCK_STREAM, 0))< 0)
@@ -37,7 +39,7 @@ int main()
     }
  
     ipOfServer.sin_family = AF_INET;
-    ipOfServer.sin_port = htons(PORT_NUMBER);
+    ipOfServer.sin_port = htons(port);
     ipOfServer.sin_addr.s_addr = inet_addr(LOCALHOST);
  
     if((n = connect(clientSocket, (struct sockaddr *)&ipOfServer, sizeof(ipOfServer)))<0)
@@ -88,28 +90,73 @@ int main()
             cout << "Invalid input. Try again." << endl;
         }
     }
-
+    // Number of Files
     TransferUtils::sendSize(files.size(), clientSocket);
+    // Serially or parallely
     TransferUtils::sendSize(n, clientSocket);
-
+    string oldMd5 = "";
+    string newMd5 = "";
+    int downloadsRemaining = DOWNLOADS_REMAINING;
+    vector<int> filesToRedownload;
+    struct stat newFileStat;
     if(n==1){
-        for(int i: files){
-            TransferUtils::sendSize(i, clientSocket);
-            cout << "Md5 for old file: " << f.md5[i-1] << endl;
-            cout << "Sent file number to server" << endl;
-            cout << "Receiving file..." << endl;
+        while(!files.empty() && downloadsRemaining){
+            for(int i: files){
+                filesToRedownload = vector<int>{};
+                
+                TransferUtils::sendSize(i, clientSocket);
+                oldMd5 = f.md5[i-1];
+                cout << "Md5 for old file: " << oldMd5 << endl;
+                cout << "Sent file number to server" << endl;
+                cout << "Receiving file..." << endl;
+                
+                newFileLocation = FileUtils::getPwd() + "/ClientFolder/" + f.files[i-1].substr(f.directory.size()+1);
+                TransferUtils::receiveCustomFile(newFileLocation, clientSocket);
+                newFileStat = FileUtils::getFileStat(newFileLocation);
+
+                newMd5 = FileUtils::getMd5ForFile(newFileLocation, newFileStat.st_size);
+                cout << "Md5 for new file: " << newMd5 << endl;
+                if(oldMd5.compare(newMd5) !=0){
+                    remove(newFileLocation.c_str());
+                    filesToRedownload.push_back(i);
+                    cout << "Md5's don't match for file: " << newFileLocation << endl;
+                    cout << "Downloads remaining: " << downloadsRemaining << endl;
+                }
+            }
+            files = filesToRedownload;
+            // Resend number of files
+            TransferUtils::sendSize(files.size(), clientSocket);
             
-            newFileLocation = FileUtils::getPwd() + "/ClientFolder/" + f.files[i-1].substr(f.directory.size()+1);
-            TransferUtils::receiveCustomFile(newFileLocation, clientSocket);
-            
-            struct stat newFileStat = FileUtils::getFileStat(newFileLocation);
-            
-            cout << "Md5 for new file: " << FileUtils::getMd5ForFile(newFileLocation, newFileStat.st_size) << endl;
+            if(files.size()>0)
+                downloadsRemaining--;
         }
     }
     else{
-        vector<FileUtils::FileInfo> fileInfo = TransferUtils::receiveCustomFilesMultithreaded(f, files, clientSocket);
+        while(!files.empty() && downloadsRemaining){
+            filesToRedownload = vector<int>{};
+            vector<FileUtils::FileInfo> fileInfo = TransferUtils::receiveCustomFilesMultithreaded(f, files, clientSocket);
+            for(FileUtils::FileInfo fInfo: fileInfo){
+                oldMd5 = fInfo.fileMd5;
+                newFileStat = FileUtils::getFileStat(fInfo.fileName);
+                newMd5 = FileUtils::getMd5ForFile(fInfo.fileName, newFileStat.st_size);
+                cout << "Old Md5: " << oldMd5 << endl;
+                cout << "New Md5: " << newMd5 << endl;
+                if(oldMd5.compare(newMd5) !=0){
+                    if(downloadsRemaining > 1)
+                        remove(fInfo.fileName.c_str());
+                    filesToRedownload.push_back(files[fInfo.fileIdx]);
+                    cout << "Md5's don't match for file: " << fInfo.fileName << endl;
+                    cout << "Downloads remaining: " << downloadsRemaining << endl;
+                }
+            }
+            files = vector<int>(filesToRedownload.begin(), filesToRedownload.end());
+            // Resend number of files
+            TransferUtils::sendSize(files.size(), clientSocket);
+            
+            if(files.size()>0)
+                downloadsRemaining--;
+        }
     }
-
+    close(clientSocket);
     return 0;
 }

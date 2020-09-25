@@ -26,7 +26,7 @@ run-server : server
 			./server $(PORT)
 
 run-client : client
-			./client
+			./client $(PORT)
 
 clean :
 			rm server client *.o

@@ -63,11 +63,11 @@ int main(int argc, const char* argv[])
     // Finally listen to the port provided
 	listen(clintListn , MAX_CLIENTS);
 
+	cout << "Server started..." << endl;
+	cout << "Listening on: " << LOCALHOST << ":" << port << endl; 
+	cout << "PWD: " << FileUtils::getPwd() << endl;
 	while(1)
 	{
-        cout << "Server started..." << endl;
-        cout << "Listening on: " << LOCALHOST << ":" << port << endl; 
-		cout << "PWD: " << FileUtils::getPwd() << endl;
 		if(!f){
 			f = FileUtils::getFilesInDir(FileUtils::getPwd() );
 			serializedFile = SerializationUtils::serializeFileList(*f);
@@ -128,13 +128,19 @@ void* connectToClient(void* td){
 			
 			cout << "File sent to client" << endl;
 			numFiles--;
+			if(numFiles==0){
+				numFiles = TransferUtils::receiveSize(threadData->clientDescriptor);
+			}
 		}
 	}
 	else{
-		vector<FileUtils::FileInfo> sentFiles = TransferUtils::sendCustomFilesMultithreaded(numFiles, threadData->f, threadData->clientDescriptor);
+		while(numFiles> 0){
+			vector<FileUtils::FileInfo> sentFiles = TransferUtils::sendCustomFilesMultithreaded(numFiles, threadData->f, threadData->clientDescriptor);
+		}
 	}
 	
 	close(threadData->clientDescriptor);
+
 	pthread_exit(NULL);
 	return nullptr;
 }
