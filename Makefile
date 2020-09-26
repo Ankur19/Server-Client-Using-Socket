@@ -26,7 +26,7 @@ run-server : server
 			./server $(PORT)
 
 run-client : client
-			./client $(PORT)
+			./client $(PORT) ${NUM_CLIENTS}
 
 clean :
 			rm server client *.o

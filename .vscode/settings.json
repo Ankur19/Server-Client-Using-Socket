@@ -31,6 +31,7 @@
         "ostream": "cpp",
         "iostream": "cpp",
         "filesystem": "cpp",
-        "thread": "cpp"
+        "thread": "cpp",
+        "fstream": "cpp"
     }
 }
