@@ -7,7 +7,7 @@
 using namespace std;
 
 #define PACKET_SIZE (int)1024
-#define NUMBER_SIZE (int)11
+#define NUMBER_SIZE (int)20
 
 class TransferUtils{
     public:
@@ -17,6 +17,7 @@ class TransferUtils{
             vector<FileUtils::FileInfo> fileInfo;
             int fileDescriptor;
         };
+        static void printToFile(string s);
         //static void printSentPacket(string s);
         //static void printReceivedPacket(string s);
         static bool isPending(vector<int>& sizes);

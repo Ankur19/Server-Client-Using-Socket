@@ -10,6 +10,7 @@
 #include <netinet/in.h> // Contains constants and structures needed for internet domain addresses
 #include <bits/stdc++.h> // Standard C++ functionality
 #include <pthread.h>
+#include <sys/wait.h>
 #include <vector>
 #include "TransferUtils/TransferUtils.h"
 
@@ -29,22 +30,25 @@ struct ThreadData{
 	ThreadData(int cd, string& s, FileUtils::FileList* fl): clientDescriptor(cd), serializedFile(s), sentFiles(vector<FileUtils::FileInfo>{}), f(fl) {}
 };
 
+pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
+
 int main(int argc, const char* argv[])
 {
     // Instantiate thread list and thread data list
 	pthread_t threads[MAX_CLIENTS];
+	struct sockaddr_in ipOfServer;
+	struct sockaddr_storage serverStorage;
+	socklen_t addrSize;
 	vector<ThreadData*> threadDataList(MAX_CLIENTS, new ThreadData());
 	FileUtils::FileList* f = nullptr;
 	string serializedFile = "";
+	vector<pid_t> pids(MAX_CLIENTS, 0);
 	char* temp;
 	int start = 0, size = 0, port = 0;
 	int clintListn = 0, clintConnt = 0, n = 0, currentThread = 0; // Instantiate the Listener and Connection variables
 	
 	// Get port from main arguments
 	port = stoi(argv[1]);
-
-    // Instantiate the struct describing Internet Socket Address
-	struct sockaddr_in ipOfServer;
 
     // Create the socket using AF_INET (IPv4 address) && SOCK_STREAM (TCP)
 	clintListn = socket(AF_INET, SOCK_STREAM, 0); // creating socket
@@ -61,7 +65,7 @@ int main(int argc, const char* argv[])
 	bind(clintListn, (struct sockaddr*)&ipOfServer , sizeof(ipOfServer));
 
     // Finally listen to the port provided
-	listen(clintListn , MAX_CLIENTS);
+	listen(clintListn , 2 * MAX_CLIENTS);
 
 	cout << "Server started..." << endl;
 	cout << "Listening on: " << LOCALHOST << ":" << port << endl; 
@@ -72,19 +76,33 @@ int main(int argc, const char* argv[])
 			f = FileUtils::getFilesInDir(FileUtils::getPwd() );
 			serializedFile = SerializationUtils::serializeFileList(*f);
 		}
-
-		clintConnt = accept(clintListn, (struct sockaddr*)NULL, NULL);
+		addrSize = sizeof(serverStorage);
+		clintConnt = accept(clintListn, (struct sockaddr*)&serverStorage, &addrSize);
 		
 		threadDataList[currentThread]->clientDescriptor = clintConnt;
 		threadDataList[currentThread]->f = f;
 		threadDataList[currentThread]->serializedFile = serializedFile;
-		
-		n = pthread_create(&threads[currentThread], NULL, connectToClient, (void*)threadDataList[currentThread]);
+		cout << "current thread: " << currentThread << endl;
+		/*n = pthread_create(&threads[currentThread], NULL, connectToClient, (void*)threadDataList[currentThread]);
 
 		if (n) {
 			cout << "Error:unable to create thread," << n << endl;
 			exit(-1);
-		};
+		};*/
+		if(currentThread<=MAX_CLIENTS){
+			n = fork();
+			if(n==0){
+				connectToClient(threadDataList[currentThread]);
+			}
+			else{
+				pids[currentThread] = n;
+			}
+		}
+		else{
+			cout << "Connection limit exceeded." << endl;
+			for(pid_t i: pids)
+				waitpid(i, NULL, 0);
+		}
 
 		currentThread++;
      }
@@ -99,6 +117,7 @@ void* connectToClient(void* td){
 	int n = 0, numFiles = 0, sharingType = 0;
 	FileUtils::FileInfo f;
 	vector<int> files;
+	clock_t beginTime;
 
 	cout << "Client Number: " << threadData->clientDescriptor << endl;
 
@@ -112,6 +131,7 @@ void* connectToClient(void* td){
 	numFiles = TransferUtils::receiveSize(threadData->clientDescriptor);
 	sharingType = TransferUtils::receiveSize(threadData->clientDescriptor);
 	if(sharingType==1){
+		beginTime = clock();
 		while(numFiles > 0){
 			n = TransferUtils::receiveSize(threadData->clientDescriptor);
 	
@@ -130,6 +150,9 @@ void* connectToClient(void* td){
 			numFiles--;
 			if(numFiles==0){
 				numFiles = TransferUtils::receiveSize(threadData->clientDescriptor);
+				TransferUtils::printToFile(to_string((float)(clock()-beginTime)/CLOCKS_PER_SEC));
+				cout << "Sent files in: " << (float)(clock()-beginTime)/CLOCKS_PER_SEC << " milli seconds" << endl;
+				beginTime = clock();
 			}
 		}
 	}

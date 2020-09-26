@@ -19,40 +19,30 @@ void* connectToServer(void* tD);
 
 struct ThreadData{
 	int clientDescriptor;
+    int port;
 	string serializedFile;
 	vector<FileUtils::FileInfo> sentFiles;
 	FileUtils::FileList* f;
+    int automated;
     int threadNum;
-    struct sockaddr_in* ipOfServer;
-	ThreadData(): clientDescriptor(0), serializedFile(""), sentFiles(vector<FileUtils::FileInfo>{}), f(nullptr), threadNum(0), ipOfServer(nullptr) {}
+	ThreadData(): clientDescriptor(0), serializedFile(""), sentFiles(vector<FileUtils::FileInfo>{}), f(nullptr), threadNum(0), port(0), automated(0) {}
 };
 
 int main(int argc, const char* argv[])
 {
     int clientSocket = 0,n = 0;
-    struct sockaddr_in ipOfServer;
     
     int port = stoi(argv[1]);
-    int numClients = stoi(argv[2]);
+    int folderIndex = stoi(argv[2]);
+    int automated = stoi(argv[3]);
 
-    pthread_t threads[numClients];
-    vector<ThreadData*> threadDataList(numClients, new ThreadData());
+    pthread_t threads[1];
+    vector<ThreadData*> threadDataList(1, new ThreadData());
 
-    if((clientSocket = socket(AF_INET, SOCK_STREAM, 0))< 0)
-    {
-        printf("Socket not created \n");
-        return 1;
-    }
- 
-    ipOfServer.sin_family = AF_INET;
-    ipOfServer.sin_port = htons(port);
-    ipOfServer.sin_addr.s_addr = inet_addr(LOCALHOST);
-    
-    for(int i = 0; i< numClients;i++){
-        threadDataList[i]->clientDescriptor = clientSocket;
-        threadDataList[i]->ipOfServer = (struct sockaddr_in*)malloc(sizeof(ipOfServer));
-        threadDataList[i]->threadNum = i;
-        memcpy(threadDataList[i]->ipOfServer, (void*)&ipOfServer, sizeof(ipOfServer));
+    for(int i = 0; i<1;i++){
+        threadDataList[i]->port = port;
+        threadDataList[i]->threadNum = folderIndex;
+        threadDataList[i]->automated = automated;
         n = pthread_create(&threads[i], NULL, connectToServer, (void*)threadDataList[i]);
         if (n) {
 			cout << "Error:unable to create thread," << n << endl;
@@ -68,16 +58,26 @@ int main(int argc, const char* argv[])
 void* connectToServer(void* tD){
     ThreadData* threadData = (ThreadData*)tD;
     
-    int clientSocket, threadNum, n = 0;
+    int clientSocket, threadNum, n = 0, port;
     string tempString, newFileLocation;
     vector<int> files{};
     bool isValid;
     FileUtils::FileList f;
 
-    clientSocket = threadData->clientDescriptor;
     threadNum = threadData->threadNum;
-    struct sockaddr_in ipOfServer = *(threadData->ipOfServer);
+    struct sockaddr_in ipOfServer;
+    port = threadData->port;
     n = mkdir((FileUtils::getPwd() + "/ClientFolder_" + to_string(threadNum)).c_str(), 0777);
+
+    if((clientSocket = socket(AF_INET, SOCK_STREAM, 0))< 0)
+    {
+        printf("Socket not created \n");
+        pthread_exit(NULL);
+        return nullptr;
+    }
+    ipOfServer.sin_family = AF_INET;
+    ipOfServer.sin_port = htons(port);
+    ipOfServer.sin_addr.s_addr = inet_addr(LOCALHOST);
 
     if((n = connect(clientSocket, (struct sockaddr *)&ipOfServer, sizeof(ipOfServer)))<0)
     {
@@ -90,45 +90,55 @@ void* connectToServer(void* tD){
 
     SerializationUtils::deserializeFileList(tempString, f);
     threadData->f = &f;
-
-    cout << "Files in the folder: " << endl;
-    for(int i=0; i<f.numFiles; i++){
-        cout << '\t' << i+1 << '\t' << f.files[i] << endl;
-    }
-
-    cout << endl;
-    cout << "Which files do you need?" << endl;
-    cout << "Input file numbers with spaces in between." << endl;
-    while(1){
-        tempString = "";
-        getline(cin, tempString);
-        istringstream s(tempString);
-        while(getline(s, tempString, ' ')){
-            n = stoi(tempString);
-            files.push_back(n);
+    
+    if(threadData->automated){
+        //Always parallel
+        n = 1;
+        for(int i = 0; i< f.files.size();i++){
+            files.push_back(i+1);
         }
-        isValid = true;
-        for(int i = 0; i< files.size(); i++){
-            if(files[i] <=0 || files[i]>f.numFiles){
-                isValid = false;
-                cout << "Incorrect entry: " << files[i] << " Try again." << endl;
+    }
+    else{
+        cout << "Files in the folder: " << endl;
+        for(int i=0; i<f.numFiles; i++){
+            cout << '\t' << i+1 << '\t' << f.files[i] << endl;
+        }
+
+        cout << endl;
+        cout << "Which files do you need?" << endl;
+        cout << "Input file numbers with spaces in between." << endl;
+        while(1){
+            tempString = "";
+            getline(cin, tempString);
+            istringstream s(tempString);
+            while(getline(s, tempString, ' ')){
+                n = stoi(tempString);
+                files.push_back(n);
+            }
+            isValid = true;
+            for(int i = 0; i< files.size(); i++){
+                if(files[i] <=0 || files[i]>f.numFiles){
+                    isValid = false;
+                    cout << "Incorrect entry: " << files[i] << " Try again." << endl;
+                    break;
+                }
+            }
+            if(isValid)
+                break;
+        }
+        cout << "How do you want to download the files?" << endl;
+        cout << "1: Serially, 2: Parallelly" << endl;
+        while(1){
+            cin >> n;
+            if(n==1 || n==2){
                 break;
             }
-        }
-        if(isValid)
-            break;
-    }
-    cout << "How do you want to download the files?" << endl;
-    cout << "1: Serially, 2: Parallelly" << endl;
-    while(1){
-        cin >> n;
-        if(n==1 || n==2){
-            break;
-        }
-        else{
-            cout << "Invalid input. Try again." << endl;
+            else{
+                cout << "Invalid input. Try again." << endl;
+            }
         }
     }
+    
     // Number of Files
     TransferUtils::sendSize(files.size(), clientSocket);
     // Serially or parallely

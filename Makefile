@@ -26,7 +26,7 @@ run-server : server
 			./server $(PORT)
 
 run-client : client
-			./client $(PORT) ${NUM_CLIENTS}
+			./client $(PORT) ${FOLDER_INDEX} ${AUTO}
 
 clean :
 			rm server client *.o

@@ -86,12 +86,14 @@ FileUtils::FileInfo TransferUtils::sendCustomFile(string fileLocation, int socke
     size = fileStat.st_size;
     f.fileSize = fileStat.st_size;
     sendSize(size, socketDescriptor);
+    
     while(size > 0){
         memset(dataSending, ' ', PACKET_SIZE);
         n = fread(dataSending, sizeof(char), PACKET_SIZE, fd);
         send(socketDescriptor, dataSending, n, 0);
         size-=n;
     }
+    
     fclose(fd);
     return f;
 }
@@ -130,6 +132,7 @@ vector<FileUtils::FileInfo> TransferUtils::sendCustomFilesMultithreaded(int& num
 
     pthread_t threads[files.size()];
     fileInfo = vector<FileUtils::FileInfo>(files.size(), FileUtils::FileInfo());
+    const clock_t beginTime = clock();
     //cout << "Creating thread for each file." << endl;
     for(int i = 0; i< files.size(); i++){
         fileInfo[i].fileName = f->files[files[i]-1];
@@ -150,6 +153,10 @@ vector<FileUtils::FileInfo> TransferUtils::sendCustomFilesMultithreaded(int& num
     for(pthread_t pt: threads){
         pthread_join(pt, NULL);
     }
+
+    TransferUtils::printToFile(to_string((float)(clock()-beginTime)/CLOCKS_PER_SEC));
+    cout << "Sent files in: " << (float)(clock()-beginTime)/CLOCKS_PER_SEC << " milli seconds" << endl;
+
     for(int i = 0; i< files.size();i++){
         free(fileInfo[i].charFileName);
     }
@@ -160,7 +167,6 @@ vector<FileUtils::FileInfo> TransferUtils::sendCustomFilesMultithreaded(int& num
 
 void* TransferUtils::sendCustomFileWithIndex(void* fileInfo){
     int size = 0, n = 0;
-    time_t start, end;
     char dataSending[PACKET_SIZE];
     FileUtils::FileInfo* fInfo = (FileUtils::FileInfo*)fileInfo;
     FILE* fd;
@@ -168,7 +174,7 @@ void* TransferUtils::sendCustomFileWithIndex(void* fileInfo){
     fd = fopen(fInfo->charFileName, "rb");
     //cout << "fd: " << fd << " fileName: " << fInfo->charFileName << endl;
     size = fInfo->fileSize;
-    time(&start);
+    
     while(size > 0 && fd>0){
         memset(dataSending, ' ', PACKET_SIZE);
         memcpy(dataSending, to_string(fInfo->fileIdx).c_str(), NUMBER_SIZE);
@@ -176,9 +182,6 @@ void* TransferUtils::sendCustomFileWithIndex(void* fileInfo){
         send(fInfo->fileDescriptor, dataSending, PACKET_SIZE, 0);
         size-=n;
     }
-    time(&end);
-    fInfo->timeToSend = difftime(end, start);
-    cout << "Sent: " << fInfo->charFileName << " in " << fInfo->timeToSend << " seconds" << endl;
     fclose(fd);
     pthread_exit(NULL);
     return nullptr;
@@ -275,6 +278,12 @@ void* TransferUtils::receiveCustomFileWithIndex(void* fileInfo){
 bool TransferUtils::isPending(vector<int>& sizes){
     long long sum = (long long)accumulate(sizes.begin(), sizes.end(), 0);
     return sum>0;
+}
+
+void TransferUtils::printToFile(string s){
+    ofstream file("time.txt", ios_base::app);
+    file << s << endl;
+    file.close();
 }
 
 /*void TransferUtils::printSentPacket(string s){
