@@ -6,9 +6,6 @@
 
 using namespace std;
 
-#define PACKET_SIZE (int)1024
-#define NUMBER_SIZE (int)20
-
 class TransferUtils{
     public:
         struct ThreadedFiles{

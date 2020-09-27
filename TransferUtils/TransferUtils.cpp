@@ -15,7 +15,7 @@ void TransferUtils::receiveFile(string& output, int fileDescriptor){
         output+= string(dataReceiving);
     }
     SerializationUtils::rtrim(output);
-}
+};
 
 void TransferUtils::receiveCustomFile(string& output, int fileDescriptor){
     char dataReceiving[PACKET_SIZE];
@@ -32,7 +32,7 @@ void TransferUtils::receiveCustomFile(string& output, int fileDescriptor){
         size-=n;
     }
     fclose(file);
-}
+};
 
 void TransferUtils::sendSize(int size, int fileDescriptor){
     char sizePacket[NUMBER_SIZE];
@@ -40,7 +40,7 @@ void TransferUtils::sendSize(int size, int fileDescriptor){
     memcpy(sizePacket, to_string(size).c_str(), NUMBER_SIZE);
 	send(fileDescriptor, sizePacket, NUMBER_SIZE, 0);
     return;
-}
+};
 
 int TransferUtils::receiveSize(int fileDescriptor){
     string s;
@@ -49,7 +49,7 @@ int TransferUtils::receiveSize(int fileDescriptor){
     memset(sizePacket, ' ', NUMBER_SIZE);
     recv(fileDescriptor, sizePacket, NUMBER_SIZE, 0);
     return atoi(sizePacket);
-}
+};
 
 void TransferUtils::sendFile(string& serializedFile, int clientDescriptor){
 	int size = 0, n = 0;
@@ -73,7 +73,7 @@ void TransferUtils::sendFile(string& serializedFile, int clientDescriptor){
 	}
 
 	free(pointerToFree);
-}
+};
 
 FileUtils::FileInfo TransferUtils::sendCustomFile(string fileLocation, int socketDescriptor){
     int size = 0, n = 0;
@@ -97,7 +97,7 @@ FileUtils::FileInfo TransferUtils::sendCustomFile(string fileLocation, int socke
     
     fclose(fd);
     return f;
-}
+};
 
 vector<int> TransferUtils::getFileSizes(vector<int>& files, FileUtils::FileList* f){
     struct stat s;
@@ -107,7 +107,7 @@ vector<int> TransferUtils::getFileSizes(vector<int>& files, FileUtils::FileList*
         sz.push_back(s.st_size);
     }
     return sz;
-}
+};
 
 vector<FileUtils::FileInfo> TransferUtils::sendCustomFilesMultithreaded(int& numFiles, FileUtils::FileList* f, int fileDescriptor){
     vector<int> files{};
@@ -161,7 +161,7 @@ vector<FileUtils::FileInfo> TransferUtils::sendCustomFilesMultithreaded(int& num
     numFiles = receiveSize(fileDescriptor);
     cout << "Need to resend: " << numFiles  << " files." << endl;
     return fileInfo;
-}
+};
 
 void* TransferUtils::sendCustomFileWithIndex(void* fileInfo){
     int size = 0, n = 0;
@@ -182,7 +182,7 @@ void* TransferUtils::sendCustomFileWithIndex(void* fileInfo){
     fclose(fd);
     pthread_exit(NULL);
     return nullptr;
-}
+};
 
 vector<FileUtils::FileInfo> TransferUtils::receiveCustomFilesMultithreaded(FileUtils::FileList& f, vector<int>& files, int fileDescriptor, int threadNum){
     vector<int> sizes;
@@ -251,7 +251,7 @@ vector<FileUtils::FileInfo> TransferUtils::receiveCustomFilesMultithreaded(FileU
     cout << "Files received..!!" << endl;
 
     return tf.fileInfo;
-}
+};
 
 void* TransferUtils::saveToFile(void* fileInfo){
     int size = 0, n = 0;
@@ -287,18 +287,18 @@ void* TransferUtils::saveToFile(void* fileInfo){
     }
     pthread_exit(NULL);
     return nullptr;
-}
+};
 
 bool TransferUtils::isPending(vector<int>& sizes){
     long long sum = (long long)accumulate(sizes.begin(), sizes.end(), 0);
     return sum>0;
-}
+};
 
 void TransferUtils::printToFile(string s){
     ofstream file("time.txt", ios_base::app);
     file << s << endl;
     file.close();
-}
+};
 
 /*void TransferUtils::printSentPacket(string s){
     ofstream file("serverPackets.txt", ios_base::app);

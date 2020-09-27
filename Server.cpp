@@ -16,9 +16,6 @@
 
 using namespace std;
 
-#define LOCALHOST "127.0.0.1"
-#define MAX_CLIENTS 8
-
 void* connectToClient(void* td);
 
 struct ThreadData{

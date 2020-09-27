@@ -13,8 +13,6 @@
 
 using namespace std;
 
-#define LOCALHOST "127.0.0.1"
-
 void* connectToServer(void* tD);
 
 struct ThreadData{

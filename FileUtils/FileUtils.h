@@ -8,6 +8,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <fstream>
+#include "../VARIABLES.h"
 
 using namespace std;
 namespace fs = filesystem;

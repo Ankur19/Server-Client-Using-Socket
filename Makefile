@@ -29,4 +29,4 @@ run-client : client
 			./client $(PORT) ${FOLDER_INDEX} ${AUTO}
 
 clean :
-			rm server client *.o
+			rm server client time.txt *.o
