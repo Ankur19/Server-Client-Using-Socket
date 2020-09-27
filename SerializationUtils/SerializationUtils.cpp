@@ -39,6 +39,6 @@ void SerializationUtils::deserializeFileList(string& fileList, FileUtils::FileLi
 
 void SerializationUtils::rtrim(string &s) {
     s.erase(find_if(s.rbegin(), s.rend(), [](unsigned char ch) {
-        return !isspace(ch);
+        return !isspace(ch) && ch != '0';
     }).base(), s.end());
 }

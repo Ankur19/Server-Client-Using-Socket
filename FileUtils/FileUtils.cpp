@@ -12,7 +12,7 @@ FileUtils::FileList* FileUtils::getFilesInDir(string dir){
         fileStat = getFileStat(entry.path());
         if(!S_ISDIR(fileStat.st_mode)){
             f->numFiles++;
-            f->files.push_back(entry.path());
+            f->files.push_back(string(entry.path()));
             f->md5.push_back(getMd5ForFile(entry.path(), fileStat.st_size));
         }
     }

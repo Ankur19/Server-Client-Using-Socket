@@ -16,6 +16,8 @@ class TransferUtils{
             vector<int> sizes;
             vector<FileUtils::FileInfo> fileInfo;
             int fileDescriptor;
+            vector<pthread_mutex_t> locks;
+            pthread_mutex_t lock;
         };
         static void printToFile(string s);
         //static void printSentPacket(string s);
@@ -29,7 +31,7 @@ class TransferUtils{
         static vector<int> getFileSizes(vector<int>& files, FileUtils::FileList* f);
         static FileUtils::FileInfo sendCustomFile(string fileLocation, int socketDescriptor);
         static void* sendCustomFileWithIndex(void* fileInfo);
-        static void* receiveCustomFileWithIndex(void* fileInfo);
+        static void* saveToFile(void* fileInfo);
         static vector<FileUtils::FileInfo> sendCustomFilesMultithreaded(int& numFiles, FileUtils::FileList* f, int fileDescriptor);
         static vector<FileUtils::FileInfo> receiveCustomFilesMultithreaded(FileUtils::FileList& f, vector<int>& files, int fileDescriptor, int threadNum);
 };

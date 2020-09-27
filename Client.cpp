@@ -191,6 +191,7 @@ void* connectToServer(void* tD){
                 }
                 else{
                     cout << "Cancelling redownload." << endl;
+                    break;
                 }
             }
         }
@@ -206,7 +207,6 @@ void* connectToServer(void* tD){
                 cout << "Old Md5: " << oldMd5 << endl;
                 cout << "New Md5: " << newMd5 << endl;
                 if(oldMd5.compare(newMd5) !=0){
-                    remove(fInfo.fileName.c_str());
                     filesToRedownload.push_back(files[fInfo.fileIdx]);
                     cout << "Md5's don't match for file: " << fInfo.fileName << endl;
                 }
@@ -231,6 +231,7 @@ void* connectToServer(void* tD){
                 }
                 else{
                     cout << "Cancelling redownload." << endl;
+                    break;
                 }
             }
         }

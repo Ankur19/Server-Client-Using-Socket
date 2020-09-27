@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Create a 5gb file
-echo "Generate large (2gb) file?"
+echo "Generate large (500 mb) file?"
 echo "1: No, 2: Yes"
 read needed
 
@@ -22,4 +22,3 @@ for ((i=0;i<$numClients;i++));
 do
     gnome-terminal --working-directory $PWD --tab -e "make run-client PORT=50017 FOLDER_INDEX=$i AUTO=$automated"
 done
-

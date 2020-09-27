@@ -30,8 +30,6 @@ struct ThreadData{
 	ThreadData(int cd, string& s, FileUtils::FileList* fl): clientDescriptor(cd), serializedFile(s), sentFiles(vector<FileUtils::FileInfo>{}), f(fl) {}
 };
 
-pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
-
 int main(int argc, const char* argv[])
 {
     // Instantiate thread list and thread data list
@@ -73,7 +71,7 @@ int main(int argc, const char* argv[])
 	while(1)
 	{
 		if(!f){
-			f = FileUtils::getFilesInDir(FileUtils::getPwd() );
+			f = FileUtils::getFilesInDir(FileUtils::getPwd());
 			serializedFile = SerializationUtils::serializeFileList(*f);
 		}
 		addrSize = sizeof(serverStorage);
@@ -82,7 +80,6 @@ int main(int argc, const char* argv[])
 		threadDataList[currentThread]->clientDescriptor = clintConnt;
 		threadDataList[currentThread]->f = f;
 		threadDataList[currentThread]->serializedFile = serializedFile;
-		cout << "current thread: " << currentThread << endl;
 		/*n = pthread_create(&threads[currentThread], NULL, connectToClient, (void*)threadDataList[currentThread]);
 
 		if (n) {

@@ -60,6 +60,7 @@ void TransferUtils::sendFile(string& serializedFile, int clientDescriptor){
 	char* pointerToFree = temp;
 
     sendSize(size, clientDescriptor);
+    memset(temp, ' ', size);
 	memcpy(temp, serializedFile.c_str(), size);
 
 	while(size > 0){
@@ -126,9 +127,6 @@ vector<FileUtils::FileInfo> TransferUtils::sendCustomFilesMultithreaded(int& num
     for(int i = 0; i<numFiles; i++){
         sendSize(sizes[i], fileDescriptor);
     }
-    //once sent- wait for client to send a file and then create threads
-    cout << "waiting for client confirmation" << endl;
-    n = receiveSize(fileDescriptor);
 
     pthread_t threads[files.size()];
     fileInfo = vector<FileUtils::FileInfo>(files.size(), FileUtils::FileInfo());
@@ -172,7 +170,6 @@ void* TransferUtils::sendCustomFileWithIndex(void* fileInfo){
     FILE* fd;
 
     fd = fopen(fInfo->charFileName, "rb");
-    //cout << "fd: " << fd << " fileName: " << fInfo->charFileName << endl;
     size = fInfo->fileSize;
     
     while(size > 0 && fd>0){
@@ -190,10 +187,14 @@ void* TransferUtils::sendCustomFileWithIndex(void* fileInfo){
 vector<FileUtils::FileInfo> TransferUtils::receiveCustomFilesMultithreaded(FileUtils::FileList& f, vector<int>& files, int fileDescriptor, int threadNum){
     vector<int> sizes;
     ThreadedFiles tf;
-    pthread_t threads[files.size()];
+    char fileIdx[NUMBER_SIZE];
+    vector<pthread_t>threads{};
     string newFileLocation;
     FILE* file;
     int threadIdx, n;
+    char dataReceiving[PACKET_SIZE];
+    pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
+
     cout << "Sending file numbers. NumFiles: " << files.size() << endl;
     // Send file numbers
     for(int i = 0; i< files.size();i++){
@@ -205,16 +206,14 @@ vector<FileUtils::FileInfo> TransferUtils::receiveCustomFilesMultithreaded(FileU
         n = receiveSize(fileDescriptor);
         sizes.push_back(n);
     }
-    cout << "sizes";
+    cout << "sizes: ";
     for(int i: sizes){
         cout << i << ",";
     }
     cout << endl;
-    cout << "sending client confirmation" << endl;
-    sendSize(777, fileDescriptor);
 
-    //cout << "Creating threads to receive files." << endl;
-    // Receive files
+    tf.lock = lock;
+    tf.fileDescriptor = fileDescriptor;
     for(int i = 0; i<files.size(); i++){
         FileUtils::FileInfo fInf;
         newFileLocation = FileUtils::getPwd() + "/ClientFolder_"+to_string(threadNum)+"/" + f.files[files[i]-1].substr(f.directory.size()+1);
@@ -227,49 +226,64 @@ vector<FileUtils::FileInfo> TransferUtils::receiveCustomFilesMultithreaded(FileU
         tf.fileInfo[i].fileIdx = i;
         tf.fileInfo[i].fileSize = sizes[i];
         tf.fileInfo[i].fileMd5 = f.md5[files[i]-1];
-        tf.fileDescriptor = fileDescriptor;
+        tf.locks.push_back(PTHREAD_MUTEX_INITIALIZER);
     }
-    for(int i = 0; i<files.size();i++){
-        threadIdx = pthread_create(&threads[i], NULL, receiveCustomFileWithIndex, (void*)&tf);
-        if (threadIdx) {
-			cout << "Error:unable to create thread," << threadIdx << endl;
-			exit(-1);
-		};
+    
+    while(1){
+        pthread_mutex_lock(&lock);
+        if(!isPending(tf.sizes)){
+            pthread_mutex_unlock(&lock);
+            break;
+        }
+        pthread_mutex_unlock(&lock);
+        pthread_t thread;
+        pthread_create(&thread, NULL, saveToFile, (void*)&tf);
+        threads.push_back(thread);
     }
+
     for(pthread_t pt: threads){
         pthread_join(pt, NULL);
+    }
+
+    for(FILE* i: tf.files){
+        fclose(i);
     }
     cout << "Files received..!!" << endl;
 
     return tf.fileInfo;
 }
 
-void* TransferUtils::receiveCustomFileWithIndex(void* fileInfo){
+void* TransferUtils::saveToFile(void* fileInfo){
     int size = 0, n = 0;
     char fileIdx[NUMBER_SIZE];
-    time_t start, end;
     char dataReceiving[PACKET_SIZE];
     ThreadedFiles* fInfo = (ThreadedFiles*)fileInfo;
-    string s;
+    bool received = false;
 
-    while(isPending(fInfo->sizes)){
-        memset(dataReceiving, ' ', PACKET_SIZE);
-        n = recv(fInfo->fileDescriptor, dataReceiving, PACKET_SIZE, 0);
-        if(n>0){
-            memcpy(fileIdx, dataReceiving, NUMBER_SIZE);
-            s = string(fileIdx);
-            SerializationUtils::rtrim(s);
-            n = stoi(s);
+    memset(dataReceiving, ' ', PACKET_SIZE);
+    memset(fileIdx, ' ', NUMBER_SIZE);
+
+    pthread_mutex_lock(&(fInfo->lock));
+    if(isPending(fInfo->sizes)){
+        recv(fInfo->fileDescriptor, dataReceiving, PACKET_SIZE, 0);
+        memcpy(fileIdx, dataReceiving, NUMBER_SIZE);
+        n = atoi(fileIdx);
+        if(fInfo->sizes[n] > PACKET_SIZE-NUMBER_SIZE)
             fInfo->sizes[n]-=PACKET_SIZE-NUMBER_SIZE;
-            if(fInfo->sizes[n] <=0){
-                fwrite(dataReceiving+NUMBER_SIZE, sizeof(char), fInfo->sizes[n] + (PACKET_SIZE-NUMBER_SIZE), fInfo->files[n]);
-                fclose(fInfo->files[n]);
-                pthread_exit(NULL);
-            }
-            else{
-                fwrite(dataReceiving+NUMBER_SIZE, sizeof(char), PACKET_SIZE-NUMBER_SIZE, fInfo->files[n]);
-            }
+        received = true;
+    }
+    pthread_mutex_unlock(&(fInfo->lock));
+
+    if(received){
+        pthread_mutex_lock(&(fInfo->locks[n]));
+        if(fInfo->sizes[n] <=PACKET_SIZE-NUMBER_SIZE){
+            fwrite(dataReceiving+NUMBER_SIZE, sizeof(char), fInfo->sizes[n], fInfo->files[n]);
+            fInfo->sizes[n] = 0;
         }
+        else{
+            fwrite(dataReceiving+NUMBER_SIZE, sizeof(char), PACKET_SIZE-NUMBER_SIZE, fInfo->files[n]);
+        }
+        pthread_mutex_unlock(&(fInfo->locks[n]));
     }
     pthread_exit(NULL);
     return nullptr;
@@ -297,4 +311,35 @@ void TransferUtils::printReceivedPacket(string s){
     file.open("clientPackets.txt", ios_base::app);
     file << s << endl;
     file.close();
+}
+
+void* TransferUtils::receiveCustomFileWithIndex(void* fileInfo){
+    int size = 0, n = 0;
+    char fileIdx[NUMBER_SIZE];
+    time_t start, end;
+    char dataReceiving[PACKET_SIZE];
+    ThreadedFiles* fInfo = (ThreadedFiles*)fileInfo;
+    string s;
+
+    while(isPending(fInfo->sizes)){
+        memset(dataReceiving, ' ', PACKET_SIZE);
+        n = recv(fInfo->fileDescriptor, dataReceiving, PACKET_SIZE, 0);
+        if(n>0){
+            memcpy(fileIdx, dataReceiving, NUMBER_SIZE);
+            s = string(fileIdx);
+            SerializationUtils::rtrim(s);
+            n = stoi(s);
+            fInfo->sizes[n]-=PACKET_SIZE-NUMBER_SIZE;
+            if(fInfo->sizes[n] <=0){
+                fInfo->sizes[n] =0;
+                fwrite(dataReceiving+NUMBER_SIZE, sizeof(char), fInfo->sizes[n] + (PACKET_SIZE-NUMBER_SIZE), fInfo->files[n]);
+                pthread_exit(NULL);
+            }
+            else{
+                fwrite(dataReceiving+NUMBER_SIZE, sizeof(char), PACKET_SIZE-NUMBER_SIZE, fInfo->files[n]);
+            }
+        }
+    }
+    pthread_exit(NULL);
+    return nullptr;
 }*/
