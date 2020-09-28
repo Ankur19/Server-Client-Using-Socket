@@ -254,7 +254,7 @@ vector<FileUtils::FileInfo> TransferUtils::receiveCustomFilesMultithreaded(FileU
 };
 
 void* TransferUtils::saveToFile(void* fileInfo){
-    int size = 0, n = 0;
+    int size = 0, n = 0, remaining = 0;
     char fileIdx[NUMBER_SIZE];
     char dataReceiving[PACKET_SIZE];
     ThreadedFiles* fInfo = (ThreadedFiles*)fileInfo;
@@ -270,15 +270,18 @@ void* TransferUtils::saveToFile(void* fileInfo){
         n = atoi(fileIdx);
         if(fInfo->sizes[n] > PACKET_SIZE-NUMBER_SIZE)
             fInfo->sizes[n]-=PACKET_SIZE-NUMBER_SIZE;
+            else{
+                remaining = fInfo->sizes[n];
+                fInfo->sizes[n] = 0;
+            }
         received = true;
     }
     pthread_mutex_unlock(&(fInfo->lock));
 
     if(received){
         pthread_mutex_lock(&(fInfo->locks[n]));
-        if(fInfo->sizes[n] <=PACKET_SIZE-NUMBER_SIZE){
-            fwrite(dataReceiving+NUMBER_SIZE, sizeof(char), fInfo->sizes[n], fInfo->files[n]);
-            fInfo->sizes[n] = 0;
+        if(remaining){
+            fwrite(dataReceiving+NUMBER_SIZE, sizeof(char), remaining, fInfo->files[n]);
         }
         else{
             fwrite(dataReceiving+NUMBER_SIZE, sizeof(char), PACKET_SIZE-NUMBER_SIZE, fInfo->files[n]);

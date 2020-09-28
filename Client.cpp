@@ -170,8 +170,6 @@ void* connectToServer(void* tD){
                 }
             }
             files = filesToRedownload;
-            // Resend number of files
-            TransferUtils::sendSize(files.size(), clientSocket);
             
             if(!files.empty()){
                 cout << "Md5's didn't match for: " << files.size() << " files." << endl;
@@ -179,6 +177,8 @@ void* connectToServer(void* tD){
                 cout << "1: Yes, 0: No" << endl;
                 cin >> n;
                 if(n==1){
+                    // Resend number of files
+                    TransferUtils::sendSize(files.size(), clientSocket);
                     redownload = true;
                     cout << "Redownloading: " << endl;
                     for(int i: files){
@@ -188,9 +188,15 @@ void* connectToServer(void* tD){
                     }
                 }
                 else{
+                    // Resend number of files
+                    TransferUtils::sendSize(0, clientSocket);
                     cout << "Cancelling redownload." << endl;
                     break;
                 }
+            }
+            else{
+                // Resend number of files
+                TransferUtils::sendSize(0, clientSocket);
             }
         }
     }
@@ -210,8 +216,6 @@ void* connectToServer(void* tD){
                 }
             }
             files = vector<int>(filesToRedownload.begin(), filesToRedownload.end());
-            // Resend number of files
-            TransferUtils::sendSize(files.size(), clientSocket);
 
             if(!files.empty()){
                 cout << "Md5's didn't match for: " << files.size() << " files." << endl;
@@ -219,6 +223,8 @@ void* connectToServer(void* tD){
                 cout << "1: Yes, 0: No" << endl;
                 cin >> n;
                 if(n==1){
+                    // Resend number of files
+                    TransferUtils::sendSize(files.size(), clientSocket);
                     redownload = true;
                     cout << "Redownloading: " << endl;
                     for(int i: files){
@@ -228,9 +234,15 @@ void* connectToServer(void* tD){
                     }
                 }
                 else{
+                    // Resend number of files
+                    TransferUtils::sendSize(0, clientSocket);
                     cout << "Cancelling redownload." << endl;
                     break;
                 }
+            }
+            else{
+                // Resend number of files
+                TransferUtils::sendSize(0, clientSocket);
             }
         }
     }

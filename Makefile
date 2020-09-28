@@ -1,7 +1,7 @@
 CC = g++
 CFLAGS = -g -Wall
 CPPVERSION = -std=c++17
-LDFLAGS = -lpthread -lssl -lcrypto -lz -ldl -static-libgcc "-lstdc++fs"
+LDFLAGS = -lpthread -lssl -lcrypto -ldl -static-libgcc "-lstdc++fs"
 
 FileUtils.o : FileUtils/FileUtils.cpp FileUtils/FileUtils.h
 			${CC} ${CPPVERSION} -c FileUtils/FileUtils.cpp ${LDFLAGS}
