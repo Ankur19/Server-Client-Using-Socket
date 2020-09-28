@@ -32,6 +32,7 @@
         "iostream": "cpp",
         "filesystem": "cpp",
         "thread": "cpp",
-        "fstream": "cpp"
+        "fstream": "cpp",
+        "iosfwd": "cpp"
     }
 }

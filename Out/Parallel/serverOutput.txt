@@ -1,0 +1,3785 @@
+./server 50017
+Server started...
+Listening on: 127.0.0.1:50017
+PWD: /home/asaikia/Desktop/PA1/Code
+Client Number: 4
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003963 milli seconds
+Need to resend: 0 files.
+Client Number: 5
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004962 milli seconds
+Need to resend: 0 files.
+Client Number: 4
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005207 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003039 milli seconds
+Need to resend: 0 files.
+Client Number: 5
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003763 milli seconds
+Need to resend: 0 files.
+Client Number: 5
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003996 milli seconds
+Need to resend: 0 files.
+Client Number: 4
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004405 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004381 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00271 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005062 milli seconds
+Need to resend: 0 files.
+Client Number: 5
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00342 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004677 milli seconds
+Need to resend: 0 files.
+Client Number: 5
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00322 milli seconds
+Need to resend: 0 files.
+Client Number: 5
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003863 milli seconds
+Need to resend: 0 files.
+Client Number: 4
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00384 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002735 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003799 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003567 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.001979 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00489 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00308 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00335 milli seconds
+Need to resend: 0 files.
+Client Number: 5
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004452 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005049 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005167 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004345 milli seconds
+Need to resend: 0 files.
+Client Number: 5
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003375 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003099 milli seconds
+Need to resend: 0 files.
+Client Number: 5
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004522 milli seconds
+Need to resend: 0 files.
+Client Number: 5
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002006 milli seconds
+Need to resend: 0 files.
+Client Number: 4
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004176 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00463 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004035 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004919 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002301 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003414 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004572 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005096 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00327 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004116 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004121 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005551 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004383 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.001985 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004919 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003077 milli seconds
+Need to resend: 0 files.
+Client Number: 5
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003241 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003192 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004042 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002705 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003365 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002791 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003331 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003213 milli seconds
+Need to resend: 0 files.
+Client Number: 5
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003295 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004436 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002674 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003582 milli seconds
+Need to resend: 0 files.
+Client Number: 5
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004446 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002889 milli seconds
+Need to resend: 0 files.
+Client Number: 5
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003846 milli seconds
+Need to resend: 0 files.
+Client Number: 5
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003118 milli seconds
+Need to resend: 0 files.
+Client Number: 4
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003415 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003278 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002989 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003335 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004576 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004262 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004103 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002506 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005424 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003191 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004829 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004185 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002608 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002785 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004592 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002815 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002986 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003501 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003327 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004948 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004068 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003327 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00404 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005421 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003086 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003312 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00224 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002046 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004328 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004665 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002476 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002314 milli seconds
+Need to resend: 0 files.
+Client Number: 5
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004002 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005543 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.0027 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003365 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004594 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00213 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00559 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004212 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003407 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004113 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004624 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00585 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003201 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003693 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002853 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003439 milli seconds
+Need to resend: 0 files.
+Client Number: 5
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005283 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004276 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004175 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002851 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005305 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005888 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004272 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004092 milli seconds
+Need to resend: 0 files.
+Client Number: 5
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.006031 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002497 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004167 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004945 milli seconds
+Need to resend: 0 files.
+Client Number: 5
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00261 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003506 milli seconds
+Need to resend: 0 files.
+Client Number: 5
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005353 milli seconds
+Need to resend: 0 files.
+Client Number: 5
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002436 milli seconds
+Need to resend: 0 files.
+Client Number: 4
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005635 milli seconds
+Need to resend: 0 files.
+Client Number: 11
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002963 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004683 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004523 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004293 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002348 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002835 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005714 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.0032 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005054 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002563 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005278 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.006086 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004893 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003967 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004141 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004734 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004684 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002959 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003729 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003386 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00227 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.0023 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003465 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003425 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004694 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002852 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003035 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00356 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003432 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003875 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003725 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003229 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003459 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004346 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004302 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002839 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004319 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003542 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00334 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003681 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002883 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004033 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002531 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004012 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00489 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003151 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004643 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003749 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002314 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00425 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003563 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004149 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004369 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00311 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003955 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003227 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004464 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005637 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004451 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004913 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003656 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005966 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003446 milli seconds
+Need to resend: 0 files.
+Client Number: 5
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002257 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005739 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004241 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00488 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004323 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005144 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005111 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004696 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004172 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005414 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003462 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003455 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003601 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004466 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002329 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003539 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005086 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00431 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003925 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003311 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002265 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002567 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004657 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00259 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002634 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003127 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004642 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003435 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004645 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004053 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003769 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003998 milli seconds
+Need to resend: 0 files.
+Client Number: 5
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00389 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003782 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004445 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004767 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005445 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.0039 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005178 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003361 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002819 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005057 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005261 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002985 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002671 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003713 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004334 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003733 milli seconds
+Need to resend: 0 files.
+Client Number: 5
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003691 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004826 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004716 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003511 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002287 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003469 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005783 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004136 milli seconds
+Need to resend: 0 files.
+Client Number: 5
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003844 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002227 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003488 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005396 milli seconds
+Need to resend: 0 files.
+Client Number: 5
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005364 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003374 milli seconds
+Need to resend: 0 files.
+Client Number: 5
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00345 milli seconds
+Need to resend: 0 files.
+Client Number: 5
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003932 milli seconds
+Need to resend: 0 files.
+Client Number: 4
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005544 milli seconds
+Need to resend: 0 files.
+Client Number: 12
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00597 milli seconds
+Need to resend: 0 files.
+Client Number: 11
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003806 milli seconds
+Need to resend: 0 files.
+Client Number: 11
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004938 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005377 milli seconds
+Need to resend: 0 files.
+Client Number: 11
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003783 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004218 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004691 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003682 milli seconds
+Need to resend: 0 files.
+Client Number: 11
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004876 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004119 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004081 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004694 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004963 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004055 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005949 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00441 milli seconds
+Need to resend: 0 files.
+Client Number: 11
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003718 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004427 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005439 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002929 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005909 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003475 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002928 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005312 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004296 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004962 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004409 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005284 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004182 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00248 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004765 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005212 milli seconds
+Need to resend: 0 files.
+Client Number: 11
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002508 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002508 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003839 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005983 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003713 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004422 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003051 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005378 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004922 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002094 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00464 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003788 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00445 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003213 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005615 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004073 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005245 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00407 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00604 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004967 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004227 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00515 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00422 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002204 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005255 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004691 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.0058 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003421 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00247 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003847 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00223 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003536 milli seconds
+Need to resend: 0 files.
+Client Number: 11
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004664 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005137 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004435 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003738 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003357 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005316 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003781 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003316 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002762 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004614 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005717 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00366 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004711 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003073 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005294 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005857 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005015 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004144 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00476 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004374 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004096 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005932 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004461 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003139 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002951 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00491 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003963 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002466 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00308 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005334 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004921 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003232 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005589 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.006066 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005154 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003991 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003172 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004901 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005066 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00449 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004004 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004074 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002969 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00482 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003404 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00577 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004673 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005621 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004555 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003654 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004335 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003361 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005778 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005787 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.0028 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005194 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.006628 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005869 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005223 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004003 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002828 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005252 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.006309 milli seconds
+Need to resend: 0 files.
+Client Number: 5
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004853 milli seconds
+Need to resend: 0 files.
+Client Number: 11
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004509 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005651 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005947 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005099 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.006527 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003346 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003456 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002074 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003445 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00265 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005283 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.006106 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004914 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003476 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00427 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004665 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00407 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003828 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003835 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003379 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005627 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.006401 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004555 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005846 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005274 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005902 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002941 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003584 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003434 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005502 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004119 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005235 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005212 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005076 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00559 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005709 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.006017 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004129 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.006537 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003376 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002681 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003089 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00496 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005427 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003812 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005325 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002715 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003305 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005325 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004572 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00349 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005906 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003218 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003677 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004328 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004858 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003533 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002939 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.006217 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004391 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003697 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002859 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003642 milli seconds
+Need to resend: 0 files.
+Client Number: 5
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004465 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002512 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00278 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00249 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002937 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.006002 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004988 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004347 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.006302 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003708 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003395 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002731 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002354 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005831 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004538 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003797 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005981 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004919 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005837 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004382 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003456 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.006598 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00672 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005075 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004715 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.006825 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004816 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005207 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002034 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005019 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005497 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003101 milli seconds
+Need to resend: 0 files.
+Client Number: 5
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003457 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00387 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003968 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005482 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003984 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005099 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.006065 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004166 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004006 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00622 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004401 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004313 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003858 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005711 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.006523 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00452 milli seconds
+Need to resend: 0 files.
+Client Number: 5
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00262 milli seconds
+Need to resend: 0 files.
+Client Number: 8
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00351 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004776 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002627 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005942 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004357 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.006636 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004353 milli seconds
+Need to resend: 0 files.
+Client Number: 5
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005459 milli seconds
+Need to resend: 0 files.
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004143 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004193 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00335 milli seconds
+Need to resend: 0 files.
+Client Number: 5
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005843 milli seconds
+Need to resend: 0 files.
+Client Number: 6
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004654 milli seconds
+Need to resend: 0 files.
+Client Number: 5
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005514 milli seconds
+Need to resend: 0 files.
+Client Number: 5
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.002993 milli seconds
+Need to resend: 0 files.
+Client Number: 4
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005703 milli seconds
+Need to resend: 0 files.
+Client Number: 13
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004127 milli seconds
+Need to resend: 0 files.
+Client Number: 12
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003441 milli seconds
+Need to resend: 0 files.
+Client Number: 12
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.006719 milli seconds
+Need to resend: 0 files.
+Client Number: 11
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005203 milli seconds
+Need to resend: 0 files.
+Client Number: 12
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003137 milli seconds
+Need to resend: 0 files.
+Client Number: 11
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005467 milli seconds
+Need to resend: 0 files.
+Client Number: 11
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00487 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.00331 milli seconds
+Need to resend: 0 files.
+Client Number: 12
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.006235 milli seconds
+Need to resend: 0 files.
+Client Number: 11
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.007017 milli seconds
+Need to resend: 0 files.
+Client Number: 11
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005955 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003852 milli seconds
+Need to resend: 0 files.
+Client Number: 11
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005066 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.006286 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003113 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005718 milli seconds
+Need to resend: 0 files.
+Client Number: 12
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004032 milli seconds
+Need to resend: 0 files.
+Client Number: 11
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003186 milli seconds
+Need to resend: 0 files.
+Client Number: 11
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004255 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005354 milli seconds
+Need to resend: 0 files.
+Client Number: 11
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005102 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003986 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.006558 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005978 milli seconds
+Need to resend: 0 files.
+Client Number: 11
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004165 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.004692 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.003983 milli seconds
+Need to resend: 0 files.
+Client Number: 9
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005454 milli seconds
+Need to resend: 0 files.
+Client Number: 10
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 10 files
+Sending sizes for 10 files
+Sent files in: 0.005249 milli seconds
+Need to resend: 0 files.
+make: *** [Makefile:26: run-server] Interrupt
