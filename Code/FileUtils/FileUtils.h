@@ -15,6 +15,8 @@ namespace fs = filesystem;
 
 class FileUtils{
     public:
+    
+        // FileList data stricture
         typedef struct FileList{
             int numFiles;
             string directory;
@@ -24,6 +26,8 @@ class FileUtils{
             FileList() : numFiles(0), directory(""), files(vector<string>{}), md5(vector<string>{}), sizes(vector<int>{}) {};
             FileList(int numberOfFiles, string dir, vector<string> fileList, vector<string> md5s) : numFiles(numberOfFiles), directory(dir), files(fileList), md5(md5s), sizes(vector<int>{}) {};
         } FileList;
+
+        // File Info data structure
         typedef struct FileInfo{
             string fileName;
             int fileSize;
@@ -34,6 +38,7 @@ class FileUtils{
             int fileDescriptor;
             FileInfo(): fileName(""), fileSize(0), charFileName(nullptr), fileMd5(""), fileIdx(-1), timeToSend(0), fileDescriptor(-1) {}
         } FileInfo;
+
         static string getPwd();
         static FileList* getFilesInDir(string dir);
         static void printMd5Sum(unsigned char* md);

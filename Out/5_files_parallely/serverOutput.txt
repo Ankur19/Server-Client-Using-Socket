@@ -7,33 +7,33 @@ File Info sent
 Waiting for response from client
 Receiving fileNumbers for 5 files
 Sending sizes for 5 files
-Sent files in: 0.004859 milli seconds
+Sent files in: 0.004859  seconds
 Need to resend: 1 files.
 Receiving fileNumbers for 1 files
 Sending sizes for 1 files
-Sent files in: 0.001135 milli seconds
+Sent files in: 0.001135  seconds
 Need to resend: 1 files.
 Receiving fileNumbers for 1 files
 Sending sizes for 1 files
-Sent files in: 0.001155 milli seconds
+Sent files in: 0.001155  seconds
 Need to resend: 1 files.
 Receiving fileNumbers for 1 files
 Sending sizes for 1 files
-Sent files in: 0.000364 milli seconds
+Sent files in: 0.000364  seconds
 Need to resend: 1 files.
 Receiving fileNumbers for 1 files
 Sending sizes for 1 files
-Sent files in: 0.001013 milli seconds
+Sent files in: 0.001013  seconds
 Need to resend: 1 files.
 Receiving fileNumbers for 1 files
 Sending sizes for 1 files
-Sent files in: 0.001025 milli seconds
+Sent files in: 0.001025  seconds
 Need to resend: 1 files.
 Receiving fileNumbers for 1 files
 Sending sizes for 1 files
-Sent files in: 0.00047 milli seconds
+Sent files in: 0.00047  seconds
 Need to resend: 1 files.
 Receiving fileNumbers for 1 files
 Sending sizes for 1 files
-Sent files in: 0.001041 milli seconds
+Sent files in: 0.001041  seconds
 Need to resend: 0 files.

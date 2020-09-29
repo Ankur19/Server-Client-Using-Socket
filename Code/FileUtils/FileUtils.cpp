@@ -1,9 +1,12 @@
 #include "FileUtils.h"
 
+// Method to get the working directory
 string FileUtils::getPwd(){
     return fs::current_path();
 }
 
+// Get the files in the directory provided. Uses Filesystem directory iterator and returns the files list data structure
+// FileList Data structure Contains file names and md5s
 FileUtils::FileList* FileUtils::getFilesInDir(string dir){
     FileList* f = new FileList();
     f->directory = dir;
@@ -19,7 +22,7 @@ FileUtils::FileList* FileUtils::getFilesInDir(string dir){
     return f;
 }
 
-// Get the size of the file by its file descriptor
+// Get the size of the file by its file descriptor. Uses fstat
 struct stat FileUtils::getFileStat(string fileLocation) {
     struct stat statbuf;
     int fd = open(fileLocation.c_str(), O_RDONLY);
@@ -30,6 +33,7 @@ struct stat FileUtils::getFileStat(string fileLocation) {
     return statbuf;
 }
 
+// Calculates Md5 for file, given a location and size
 string FileUtils::getMd5ForFile(string fileLocation, unsigned long fileSize){
     char* fileBuffer;
     unsigned char result[MD5_DIGEST_LENGTH];

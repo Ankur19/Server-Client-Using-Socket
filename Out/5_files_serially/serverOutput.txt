@@ -15,4 +15,4 @@ Received file number: 4
 File sent to client
 Received file number: 5
 File sent to client
-Sent files in: 0.002998 milli seconds
+Sent files in: 0.002998  seconds

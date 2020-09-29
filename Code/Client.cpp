@@ -151,7 +151,7 @@ void* connectToServer(void* tD){
                     break;
                 }
             }
-            if(isValid)
+            if(isValid) // If user input is valid then break
                 break;
         }
 
@@ -186,46 +186,62 @@ void* connectToServer(void* tD){
 
     // This is the condition for sequential downloads
     if(n==1){
-        while(!files.empty() && redownload){
+        while(!files.empty() && redownload){    // Infinite while loop till all files are download and redownload is not stopped
             redownload = false;
             beginTime = clock();
             for(int i: files){
                 filesToRedownload = vector<int>{};
                 
-                TransferUtils::sendSize(i, clientSocket);
+                TransferUtils::sendSize(i, clientSocket);   // Send the file Number for the file to download. This file number corresponds to what was shown in the UI
                 oldMd5 = f.md5[i-1];
                 cout << "Md5 for old file: " << oldMd5 << endl;
                 cout << "Sent file number to server" << endl;
                 cout << "Receiving file..." << endl;
                 
+                // This would be the new location of the file
                 newFileLocation = FileUtils::getPwd() + "/ClientFolder_"+to_string(threadNum)+"/" + f.files[i-1].substr(f.directory.size()+1);
-                TransferUtils::receiveCustomFile(newFileLocation, clientSocket);
-                newFileStat = FileUtils::getFileStat(newFileLocation);
 
+                // Receive custom file is used to receive the file in a custom size per packet(PACKET_DATA)
+                TransferUtils::receiveCustomFile(newFileLocation, clientSocket);
+
+                // Get the stats for the new file which would allow us to compare Md5
+                newFileStat = FileUtils::getFileStat(newFileLocation);
                 newMd5 = FileUtils::getMd5ForFile(newFileLocation, newFileStat.st_size);
+
+                // If the Md5's don't math then add the file number to files to redownload
                 cout << "Md5 for new file: " << newMd5 << endl;
                 if(oldMd5.compare(newMd5) !=0){
                     filesToRedownload.push_back(i);
                     cout << "Md5's don't match for file: " << newFileLocation << endl;
                 }
             }
-            cout << "Received files in: " << (float)(clock()-beginTime)/CLOCKS_PER_SEC << " milli seconds" << endl;
+
+            // Also log the time required to receive all the files
+            cout << "Received files in: " << (float)(clock()-beginTime)/CLOCKS_PER_SEC << "  seconds" << endl;
             files = filesToRedownload;
+
+            // If the client is automated we only log the number of files for which Md5's didn't match. We never redownload files
             if(threadData->automated){
                 TransferUtils::printToFile(to_string(files.size()), "error.txt");
                 //Donot redownload files for automated
                 files = vector<int>{};
             }
+            // This is logic for redownloads
             if(!files.empty()){
+                // Get input from user whether to redownload
                 cout << "Md5's didn't match for: " << files.size() << " files." << endl;
                 cout << "Do you want to redownload?" << endl;
                 cout << "1: Yes, 0: No" << endl;
                 cin >> n;
+
+                // If redownload we again send back the number of files to download and start the whole process again
+                // We also remove the old files before redownload
                 if(n==1){
                     // Resend number of files
-                    TransferUtils::sendSize(files.size(), clientSocket);
+                    TransferUtils::sendSize(files.size(), clientSocket); // send the number of files
                     redownload = true;
                     cout << "Redownloading: " << endl;
+                    // Remove the oldd files
                     for(int i: files){
                         newFileLocation = FileUtils::getPwd() + "/ClientFolder_"+to_string(threadNum)+"/" + f.files[i-1].substr(f.directory.size()+1);
                         remove(newFileLocation.c_str());
@@ -233,22 +249,26 @@ void* connectToServer(void* tD){
                     }
                 }
                 else{
-                    // Resend number of files
+                    // Resend number of files as 0 if user donot want to redownload files
                     TransferUtils::sendSize(0, clientSocket);
                     cout << "Cancelling redownload." << endl;
                     break;
                 }
             }
             else{
-                // Resend number of files
+                // Resend number of files as 0 if all files were downloaded correctly and no redownloads required.
                 TransferUtils::sendSize(0, clientSocket);
             }
         }
     }
     else{
+        // If user wants to download files parallely
         while(!files.empty()){
             filesToRedownload = vector<int>{};
+            // Method to receive files sent from server using multiple threads
             vector<FileUtils::FileInfo> fileInfo = TransferUtils::receiveCustomFilesMultithreaded(f, files, clientSocket, threadNum);
+            
+            // After download is complete compare the new Md5's to the old ones and polulat those file numbers in filesToDownload list
             for(FileUtils::FileInfo fInfo: fileInfo){
                 oldMd5 = fInfo.fileMd5;
                 newFileStat = FileUtils::getFileStat(fInfo.fileName);
@@ -260,22 +280,31 @@ void* connectToServer(void* tD){
                     cout << "Md5's don't match for file: " << fInfo.fileName << endl;
                 }
             }
+
+            // Update the files list
             files = vector<int>(filesToRedownload.begin(), filesToRedownload.end());
+
+            // If this an automated client then donot redownload files. Just log the number of files for which Md5's didnot match
             if(threadData->automated){
                 TransferUtils::printToFile(to_string(files.size()), "error.txt");
                 //Donot redownload files for automated
                 files = vector<int>{};
             }
+
+            // This is redownload logic. which is similar to tthat for sequential downloads.
+            // We ask user whther to redownload and then send the number of files to redownload back to server
             if(!files.empty()){
                 cout << "Md5's didn't match for: " << files.size() << " files." << endl;
                 cout << "Do you want to redownload?" << endl;
                 cout << "1: Yes, 0: No" << endl;
                 cin >> n;
                 if(n==1){
-                    // Resend number of files
+                    // Resend number of files to download again
                     TransferUtils::sendSize(files.size(), clientSocket);
                     redownload = true;
                     cout << "Redownloading: " << endl;
+
+                    // Remove old files for which md5's didn't match
                     for(int i: files){
                         newFileLocation = FileUtils::getPwd() + "/ClientFolder_"+to_string(threadNum)+"/" + f.files[i-1].substr(f.directory.size()+1);
                         remove(newFileLocation.c_str());
@@ -283,18 +312,20 @@ void* connectToServer(void* tD){
                     }
                 }
                 else{
-                    // Resend number of files
+                    // Resend number of files as 0 if user selected not to re download files
                     TransferUtils::sendSize(0, clientSocket);
                     cout << "Cancelling redownload." << endl;
                     break;
                 }
             }
             else{
-                // Resend number of files
+                // Resend number of files as 0 if the md5's match for all files
                 TransferUtils::sendSize(0, clientSocket);
             }
         }
     }
+
+    // Finally exit the thread
     pthread_exit(NULL);
     return nullptr;
 }

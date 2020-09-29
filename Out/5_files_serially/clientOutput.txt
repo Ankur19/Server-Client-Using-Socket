@@ -43,4 +43,4 @@ Md5 for old file: 78af08741db8c508ce81c0a1d14f2821
 Sent file number to server
 Receiving file...
 Md5 for new file: 78af08741db8c508ce81c0a1d14f2821
-Received files in: 0.003636 milli seconds
+Received files in: 0.003636  seconds

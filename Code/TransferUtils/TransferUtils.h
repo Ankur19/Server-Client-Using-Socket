@@ -21,7 +21,7 @@ class TransferUtils{
         //static void printReceivedPacket(string s);
         static bool isPending(vector<int>& sizes);
         static void receiveFile(string& output, int fileDescriptor);
-        static void receiveCustomFile(string& output, int fileDescriptor);
+        static void receiveCustomFile(string& fileLocation, int fileDescriptor);
         static void sendFile(string& serializedFile, int clientDescriptor);
         static void sendSize(int size, int fileDescriptor);
         static int receiveSize(int fileDescriptor);
