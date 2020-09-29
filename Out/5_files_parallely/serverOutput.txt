@@ -1,0 +1,39 @@
+./server 50055
+Server started...
+Listening on: 127.0.0.1:50055
+PWD: /home/asaikia/Desktop/PA1/Code
+Client Number: 7
+File Info sent
+Waiting for response from client
+Receiving fileNumbers for 5 files
+Sending sizes for 5 files
+Sent files in: 0.004859 milli seconds
+Need to resend: 1 files.
+Receiving fileNumbers for 1 files
+Sending sizes for 1 files
+Sent files in: 0.001135 milli seconds
+Need to resend: 1 files.
+Receiving fileNumbers for 1 files
+Sending sizes for 1 files
+Sent files in: 0.001155 milli seconds
+Need to resend: 1 files.
+Receiving fileNumbers for 1 files
+Sending sizes for 1 files
+Sent files in: 0.000364 milli seconds
+Need to resend: 1 files.
+Receiving fileNumbers for 1 files
+Sending sizes for 1 files
+Sent files in: 0.001013 milli seconds
+Need to resend: 1 files.
+Receiving fileNumbers for 1 files
+Sending sizes for 1 files
+Sent files in: 0.001025 milli seconds
+Need to resend: 1 files.
+Receiving fileNumbers for 1 files
+Sending sizes for 1 files
+Sent files in: 0.00047 milli seconds
+Need to resend: 1 files.
+Receiving fileNumbers for 1 files
+Sending sizes for 1 files
+Sent files in: 0.001041 milli seconds
+Need to resend: 0 files.

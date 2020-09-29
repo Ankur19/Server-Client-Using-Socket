@@ -1,0 +1,5 @@
+Sent: /home/asaikia/Desktop/PA1/Code/Server.cpp Size: 5285 Type: Sequence Time: 0.000165 ClientDescriptor: 7 ClientNumber: 1
+Sent: /home/asaikia/Desktop/PA1/Code/VARIABLES.h Size: 113 Type: Sequence Time: 0.000050 ClientDescriptor: 7 ClientNumber: 1
+Sent: /home/asaikia/Desktop/PA1/Code/test.sh Size: 648 Type: Sequence Time: 0.000067 ClientDescriptor: 7 ClientNumber: 1
+Sent: /home/asaikia/Desktop/PA1/Code/SerializationUtils.o Size: 71888 Type: Sequence Time: 0.000450 ClientDescriptor: 7 ClientNumber: 1
+Sent: /home/asaikia/Desktop/PA1/Code/stepTest.sh Size: 1144 Type: Sequence Time: 0.000049 ClientDescriptor: 7 ClientNumber: 1

@@ -1,0 +1,18 @@
+./server 50017
+Server started...
+Listening on: 127.0.0.1:50017
+PWD: /home/asaikia/Desktop/PA1/Code
+Client Number: 7
+File Info sent
+Waiting for response from client
+Received file number: 1
+File sent to client
+Received file number: 2
+File sent to client
+Received file number: 3
+File sent to client
+Received file number: 4
+File sent to client
+Received file number: 5
+File sent to client
+Sent files in: 0.002998 milli seconds

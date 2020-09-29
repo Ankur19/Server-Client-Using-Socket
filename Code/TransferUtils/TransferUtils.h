@@ -26,9 +26,9 @@ class TransferUtils{
         static void sendSize(int size, int fileDescriptor);
         static int receiveSize(int fileDescriptor);
         static vector<int> getFileSizes(vector<int>& files, FileUtils::FileList* f);
-        static FileUtils::FileInfo sendCustomFile(string fileLocation, int socketDescriptor);
+        static FileUtils::FileInfo sendCustomFile(string fileLocation, int socketDescriptor, int clientNumber);
         static void* sendCustomFileWithIndex(void* fileInfo);
         static void* saveToFile(void* fileInfo);
-        static vector<FileUtils::FileInfo> sendCustomFilesMultithreaded(int& numFiles, FileUtils::FileList* f, int fileDescriptor);
+        static vector<FileUtils::FileInfo> sendCustomFilesMultithreaded(int& numFiles, FileUtils::FileList* f, int fileDescriptor, int clientNumber);
         static vector<FileUtils::FileInfo> receiveCustomFilesMultithreaded(FileUtils::FileList& f, vector<int>& files, int fileDescriptor, int threadNum);
 };

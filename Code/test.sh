@@ -8,17 +8,20 @@ read needed
 echo "How many clients?"
 read numClients
 
+echo "Which port?"
+read port
+
 echo "Automated? This will make the client not ask for files to download and will download all files."
-echo "0: no, 1: yes"
+echo "0: No, 1: Sequential, 2: Parallel"
 read automated
 
 if [ $needed -eq 2 ]; then
     dd if=/dev/zero of=file.out bs=1MB count=500
 fi
 
-gnome-terminal --working-directory $PWD --tab -e "make run-server PORT=50017" 
+gnome-terminal --working-directory $PWD --tab -e "make run-server PORT=$port" 
 
 for ((i=0;i<$numClients;i++));
 do
-    gnome-terminal --working-directory $PWD --tab -e "make run-client PORT=50017 FOLDER_INDEX=$i AUTO=$automated"
+    gnome-terminal --working-directory $PWD --tab -e "make run-client PORT=$port FOLDER_INDEX=$i AUTO=$automated"
 done

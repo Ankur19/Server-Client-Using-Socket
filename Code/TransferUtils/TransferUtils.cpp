@@ -2,19 +2,28 @@
 
 void TransferUtils::receiveFile(string& output, int fileDescriptor){
     char dataReceiving[PACKET_SIZE];
-    int size = 0, finalSize = 0, n = 0;
+    int size = 0, n = 0;
     output = "";
+    char* temp;
 
     size = receiveSize(fileDescriptor);
-    finalSize = size;
+    char* data = (char*)malloc(sizeof(char)*size + 1);
+    memset(data, '0', sizeof(char)*size + 1);
+    temp = data;
     while(size>0)
     {
         memset(dataReceiving, '0', PACKET_SIZE);
         n = recv(fileDescriptor, dataReceiving, PACKET_SIZE, 0);
+        if(size < PACKET_SIZE)
+            memcpy(temp, dataReceiving, size);
+        else{
+            memcpy(temp, dataReceiving, PACKET_SIZE);
+        }
+        temp+=n;
         size-=n;
-        output+= string(dataReceiving);
     }
-    SerializationUtils::rtrim(output);
+    output = string(data);
+    free(data);
 };
 
 void TransferUtils::receiveCustomFile(string& output, int fileDescriptor){
@@ -27,8 +36,14 @@ void TransferUtils::receiveCustomFile(string& output, int fileDescriptor){
     while(size>0)
     {
         memset(dataReceiving, '0', PACKET_SIZE);
-        n = recv(fileDescriptor, dataReceiving, PACKET_SIZE, 0);
-        fwrite(dataReceiving, sizeof(char), n, file);
+        if(size < PACKET_SIZE){
+            n = recv(fileDescriptor, dataReceiving, size, 0);
+            fwrite(dataReceiving, sizeof(char), size, file);
+        }
+        else{
+            n = recv(fileDescriptor, dataReceiving, PACKET_SIZE, 0);
+            fwrite(dataReceiving, sizeof(char), n, file);
+        }
         size-=n;
     }
     fclose(file);
@@ -75,11 +90,11 @@ void TransferUtils::sendFile(string& serializedFile, int clientDescriptor){
 	free(pointerToFree);
 };
 
-FileUtils::FileInfo TransferUtils::sendCustomFile(string fileLocation, int socketDescriptor){
+FileUtils::FileInfo TransferUtils::sendCustomFile(string fileLocation, int socketDescriptor, int clientNumber){
     int size = 0, n = 0;
     char dataSending[PACKET_SIZE];
     FileUtils::FileInfo f;
-
+    clock_t beginTime;
     FILE* fd = fopen(fileLocation.c_str(), "rb");
     struct stat fileStat = FileUtils::getFileStat(fileLocation);
     f.fileName = fileLocation;
@@ -87,14 +102,15 @@ FileUtils::FileInfo TransferUtils::sendCustomFile(string fileLocation, int socke
     size = fileStat.st_size;
     f.fileSize = fileStat.st_size;
     sendSize(size, socketDescriptor);
-    
+    beginTime = clock();
     while(size > 0){
         memset(dataSending, ' ', PACKET_SIZE);
         n = fread(dataSending, sizeof(char), PACKET_SIZE, fd);
         send(socketDescriptor, dataSending, n, 0);
         size-=n;
     }
-    
+    f.timeToSend = (double)(clock()-beginTime)/CLOCKS_PER_SEC;
+    printToFile("Sent: "+fileLocation + " Size: " + to_string(f.fileSize) + " Type: Sequence Time: " + to_string(f.timeToSend) + " ClientDescriptor: " + to_string(socketDescriptor) + " ClientNumber: " + to_string(clientNumber),"log.txt");
     fclose(fd);
     return f;
 };
@@ -109,7 +125,7 @@ vector<int> TransferUtils::getFileSizes(vector<int>& files, FileUtils::FileList*
     return sz;
 };
 
-vector<FileUtils::FileInfo> TransferUtils::sendCustomFilesMultithreaded(int& numFiles, FileUtils::FileList* f, int fileDescriptor){
+vector<FileUtils::FileInfo> TransferUtils::sendCustomFilesMultithreaded(int& numFiles, FileUtils::FileList* f, int fileDescriptor, int clientNumber){
     vector<int> files{};
     vector<int> sizes{};
     int threadIdx, n = 0;
@@ -151,7 +167,9 @@ vector<FileUtils::FileInfo> TransferUtils::sendCustomFilesMultithreaded(int& num
     for(pthread_t pt: threads){
         pthread_join(pt, NULL);
     }
-
+    for(FileUtils::FileInfo& file: fileInfo){
+        printToFile("Sent: "+file.fileName + " Size: " + to_string(file.fileSize) + " Type: Parallel Time: " + to_string(file.timeToSend) + " ClientDescriptor: " + to_string(fileDescriptor) + " ClientNumber: " + to_string(clientNumber),"log.txt");
+    }
     TransferUtils::printToFile(to_string((float)(clock()-beginTime)/CLOCKS_PER_SEC), "time.txt");
     cout << "Sent files in: " << (float)(clock()-beginTime)/CLOCKS_PER_SEC << " milli seconds" << endl;
 
@@ -168,10 +186,11 @@ void* TransferUtils::sendCustomFileWithIndex(void* fileInfo){
     char dataSending[PACKET_SIZE];
     FileUtils::FileInfo* fInfo = (FileUtils::FileInfo*)fileInfo;
     FILE* fd;
+    clock_t beginTime;
 
     fd = fopen(fInfo->charFileName, "rb");
     size = fInfo->fileSize;
-    
+    beginTime = clock();
     while(size > 0 && fd>0){
         memset(dataSending, ' ', PACKET_SIZE);
         memcpy(dataSending, to_string(fInfo->fileIdx).c_str(), NUMBER_SIZE);
@@ -180,6 +199,7 @@ void* TransferUtils::sendCustomFileWithIndex(void* fileInfo){
         size-=n;
     }
     fclose(fd);
+    fInfo->timeToSend = (double)(clock()-beginTime)/CLOCKS_PER_SEC;
     pthread_exit(NULL);
     return nullptr;
 };

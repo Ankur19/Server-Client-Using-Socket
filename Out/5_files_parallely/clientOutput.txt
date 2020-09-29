@@ -1,0 +1,140 @@
+./client 50055 2 0
+Files in the folder: 
+        1       /home/asaikia/Desktop/PA1/Code/Server.cpp
+        2       /home/asaikia/Desktop/PA1/Code/VARIABLES.h
+        3       /home/asaikia/Desktop/PA1/Code/test.sh
+        4       /home/asaikia/Desktop/PA1/Code/SerializationUtils.o
+        5       /home/asaikia/Desktop/PA1/Code/stepTest.sh
+        6       /home/asaikia/Desktop/PA1/Code/Client.o
+        7       /home/asaikia/Desktop/PA1/Code/Server.o
+        8       /home/asaikia/Desktop/PA1/Code/server
+        9       /home/asaikia/Desktop/PA1/Code/Client.cpp
+        10      /home/asaikia/Desktop/PA1/Code/client
+        11      /home/asaikia/Desktop/PA1/Code/FileUtils.o
+        12      /home/asaikia/Desktop/PA1/Code/Makefile
+        13      /home/asaikia/Desktop/PA1/Code/folderRemove.sh
+        14      /home/asaikia/Desktop/PA1/Code/TransferUtils.o
+
+Which files do you need?
+Input file numbers with spaces in between.
+1 2 3 4 5
+How do you want to download the files?
+1: Serially, 2: Parallelly
+2
+Sending file numbers. NumFiles: 5
+Getting file sizes.
+sizes: 5285,113,648,72520,1144,
+fd: 0x7f6f58002840 saving to: /home/asaikia/Desktop/PA1/Code/ClientFolder_2/Server.cpp
+fd: 0x7f6f58002af0 saving to: /home/asaikia/Desktop/PA1/Code/ClientFolder_2/VARIABLES.h
+fd: 0x7f6f58002eb0 saving to: /home/asaikia/Desktop/PA1/Code/ClientFolder_2/test.sh
+fd: 0x7f6f58003360 saving to: /home/asaikia/Desktop/PA1/Code/ClientFolder_2/SerializationUtils.o
+fd: 0x7f6f58003570 saving to: /home/asaikia/Desktop/PA1/Code/ClientFolder_2/stepTest.sh
+Files received..!!
+Old Md5: 50823d174f0cfd120debcfdaddc169b6
+New Md5: 50823d174f0cfd120debcfdaddc169b6
+Old Md5: a80ac9bf099663dd0c1a597e6f5406db
+New Md5: a80ac9bf099663dd0c1a597e6f5406db
+Old Md5: 32d71ec0ee384b4f5b16298c6bb637e5
+New Md5: 32d71ec0ee384b4f5b16298c6bb637e5
+Old Md5: 7f16efd2752ce11c3823019bdc39a93d
+New Md5: 1373546d95413cbc3d2357824e3fd6ce
+Md5's don't match for file: /home/asaikia/Desktop/PA1/Code/ClientFolder_2/SerializationUtils.o
+Old Md5: 78af08741db8c508ce81c0a1d14f2821
+New Md5: 78af08741db8c508ce81c0a1d14f2821
+Md5's didn't match for: 1 files.
+Do you want to redownload?
+1: Yes, 0: No
+1
+Redownloading: 
+/home/asaikia/Desktop/PA1/Code/ClientFolder_2/SerializationUtils.o
+Sending file numbers. NumFiles: 1
+Getting file sizes.
+sizes: 72520,
+fd: 0x7f6f58003570 saving to: /home/asaikia/Desktop/PA1/Code/ClientFolder_2/SerializationUtils.o
+Files received..!!
+Old Md5: 7f16efd2752ce11c3823019bdc39a93d
+New Md5: d5446c3ad3abcd2f16e3d80819cc950e
+Md5's don't match for file: /home/asaikia/Desktop/PA1/Code/ClientFolder_2/SerializationUtils.o
+Md5's didn't match for: 1 files.
+Do you want to redownload?
+1: Yes, 0: No
+1
+Redownloading: 
+/home/asaikia/Desktop/PA1/Code/ClientFolder_2/SerializationUtils.o
+Sending file numbers. NumFiles: 1
+Getting file sizes.
+sizes: 72520,
+fd: 0x7f6f58003570 saving to: /home/asaikia/Desktop/PA1/Code/ClientFolder_2/SerializationUtils.o
+Files received..!!
+Old Md5: 7f16efd2752ce11c3823019bdc39a93d
+New Md5: b82a162f95c5df241ad8d570d155ba26
+Md5's don't match for file: /home/asaikia/Desktop/PA1/Code/ClientFolder_2/SerializationUtils.o
+Md5's didn't match for: 1 files.
+Do you want to redownload?
+1: Yes, 0: No
+1
+Redownloading: 
+/home/asaikia/Desktop/PA1/Code/ClientFolder_2/SerializationUtils.o
+Sending file numbers. NumFiles: 1
+Getting file sizes.
+sizes: 72520,
+fd: 0x7f6f58003570 saving to: /home/asaikia/Desktop/PA1/Code/ClientFolder_2/SerializationUtils.o
+Files received..!!
+Old Md5: 7f16efd2752ce11c3823019bdc39a93d
+New Md5: 29418120e320473653c1d4c9e70462ca
+Md5's don't match for file: /home/asaikia/Desktop/PA1/Code/ClientFolder_2/SerializationUtils.o
+Md5's didn't match for: 1 files.
+Do you want to redownload?
+1: Yes, 0: No
+1
+Redownloading: 
+/home/asaikia/Desktop/PA1/Code/ClientFolder_2/SerializationUtils.o
+Sending file numbers. NumFiles: 1
+Getting file sizes.
+sizes: 72520,
+fd: 0x7f6f58003570 saving to: /home/asaikia/Desktop/PA1/Code/ClientFolder_2/SerializationUtils.o
+Files received..!!
+Old Md5: 7f16efd2752ce11c3823019bdc39a93d
+New Md5: f38bd7da0979345f5ea0dc69c65f1d85
+Md5's don't match for file: /home/asaikia/Desktop/PA1/Code/ClientFolder_2/SerializationUtils.o
+Md5's didn't match for: 1 files.
+Do you want to redownload?
+1: Yes, 0: No
+1
+Redownloading: 
+/home/asaikia/Desktop/PA1/Code/ClientFolder_2/SerializationUtils.o
+Sending file numbers. NumFiles: 1
+Getting file sizes.
+sizes: 72520,
+fd: 0x7f6f58003570 saving to: /home/asaikia/Desktop/PA1/Code/ClientFolder_2/SerializationUtils.o
+Files received..!!
+Old Md5: 7f16efd2752ce11c3823019bdc39a93d
+New Md5: f2129430df1d8c2ae22fe687aeec2e78
+Md5's don't match for file: /home/asaikia/Desktop/PA1/Code/ClientFolder_2/SerializationUtils.o
+Md5's didn't match for: 1 files.
+Do you want to redownload?
+1: Yes, 0: No
+1
+Redownloading: 
+/home/asaikia/Desktop/PA1/Code/ClientFolder_2/SerializationUtils.o
+Sending file numbers. NumFiles: 1
+Getting file sizes.
+sizes: 72520,
+fd: 0x7f6f58003570 saving to: /home/asaikia/Desktop/PA1/Code/ClientFolder_2/SerializationUtils.o
+Files received..!!
+Old Md5: 7f16efd2752ce11c3823019bdc39a93d
+New Md5: 99b3eb22b3d34e289835bbfb8e3fe096
+Md5's don't match for file: /home/asaikia/Desktop/PA1/Code/ClientFolder_2/SerializationUtils.o
+Md5's didn't match for: 1 files.
+Do you want to redownload?
+1: Yes, 0: No
+1
+Redownloading: 
+/home/asaikia/Desktop/PA1/Code/ClientFolder_2/SerializationUtils.o
+Sending file numbers. NumFiles: 1
+Getting file sizes.
+sizes: 72520,
+fd: 0x7f6f58003570 saving to: /home/asaikia/Desktop/PA1/Code/ClientFolder_2/SerializationUtils.o
+Files received..!!
+Old Md5: 7f16efd2752ce11c3823019bdc39a93d
+New Md5: 7f16efd2752ce11c3823019bdc39a93d

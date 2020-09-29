@@ -25,7 +25,7 @@ struct ThreadData{
 	ThreadData(int cd, string& s, FileUtils::FileList* fl): clientDescriptor(cd), serializedFile(s), sentFiles(vector<FileUtils::FileInfo>{}), f(fl) {}
 };
 
-void* connectToClient(ThreadData* td);
+void* connectToClient(ThreadData* td, int clientNumber);
 
 int main(int argc, const char* argv[])
 {
@@ -38,6 +38,7 @@ int main(int argc, const char* argv[])
 	string serializedFile = "";
 	vector<pid_t> pids(MAX_CLIENTS, 0);
 	char* temp;
+	int numClients = 0;
 	int start = 0, size = 0, port = 0;
 	int numThreads = 0;
 	int clintListn = 0, clintConnt = 0, n = 0, currentThread = 0; // Instantiate the Listener and Connection variables
@@ -72,6 +73,7 @@ int main(int argc, const char* argv[])
 			serializedFile = SerializationUtils::serializeFileList(*f);
 		}
 		addrSize = sizeof(serverStorage);
+		numClients++;
 		clintConnt = accept(clintListn, (struct sockaddr*)&serverStorage, &addrSize);
 		
 		if(numThreads<=MAX_CLIENTS){
@@ -82,7 +84,7 @@ int main(int argc, const char* argv[])
 				td->serializedFile = serializedFile;
 				td->f = f;
 				td->clientDescriptor = clintConnt;
-				connectToClient(td);
+				connectToClient(td, numClients);
 				numThreads--;
 			}
 			else{
@@ -101,7 +103,7 @@ int main(int argc, const char* argv[])
      return 0;
 }
 
-void* connectToClient(ThreadData* td){
+void* connectToClient(ThreadData* td, int clientNumber){
 	ThreadData threadData = *td;
 	string tempString = "";
 	int n = 0, numFiles = 0, sharingType = 0;
@@ -129,11 +131,11 @@ void* connectToClient(ThreadData* td){
 			if(n <=0 || n > threadData.f->numFiles){
 				cout << "Invalid request from client." << endl;
 				close(threadData.clientDescriptor);
-				free(td);
+				delete td;
 				return nullptr;
 			}
 
-			f = TransferUtils::sendCustomFile(threadData.f->files[n-1], threadData.clientDescriptor);
+			f = TransferUtils::sendCustomFile(threadData.f->files[n-1], threadData.clientDescriptor, clientNumber);
 			f.fileMd5 = threadData.f->md5[n-1];
 			threadData.sentFiles.push_back(f);
 			
@@ -149,11 +151,11 @@ void* connectToClient(ThreadData* td){
 	}
 	else{
 		while(numFiles> 0){
-			vector<FileUtils::FileInfo> sentFiles = TransferUtils::sendCustomFilesMultithreaded(numFiles, threadData.f, threadData.clientDescriptor);
+			vector<FileUtils::FileInfo> sentFiles = TransferUtils::sendCustomFilesMultithreaded(numFiles, threadData.f, threadData.clientDescriptor, clientNumber);
 		}
 	}
 	
 	close(threadData.clientDescriptor);
-	free(td);
+	delete td;
 	return nullptr;
 }

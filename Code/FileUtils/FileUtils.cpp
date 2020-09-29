@@ -23,7 +23,9 @@ FileUtils::FileList* FileUtils::getFilesInDir(string dir){
 struct stat FileUtils::getFileStat(string fileLocation) {
     struct stat statbuf;
     int fd = open(fileLocation.c_str(), O_RDONLY);
-    if(fstat(fd, &statbuf) < 0) exit(-1);
+    if(fstat(fd, &statbuf) < 0) {
+        exit(-1);
+    }
     close(fd);
     return statbuf;
 }

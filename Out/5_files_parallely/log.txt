@@ -1,0 +1,12 @@
+Sent: /home/asaikia/Desktop/PA1/Code/Server.cpp Size: 5285 Type: Parallel Time: 0.002637 ClientDescriptor: 7 ClientNumber: 1
+Sent: /home/asaikia/Desktop/PA1/Code/VARIABLES.h Size: 113 Type: Parallel Time: 0.001066 ClientDescriptor: 7 ClientNumber: 1
+Sent: /home/asaikia/Desktop/PA1/Code/test.sh Size: 648 Type: Parallel Time: 0.000581 ClientDescriptor: 7 ClientNumber: 1
+Sent: /home/asaikia/Desktop/PA1/Code/SerializationUtils.o Size: 72520 Type: Parallel Time: 0.002665 ClientDescriptor: 7 ClientNumber: 1
+Sent: /home/asaikia/Desktop/PA1/Code/stepTest.sh Size: 1144 Type: Parallel Time: 0.001669 ClientDescriptor: 7 ClientNumber: 1
+Sent: /home/asaikia/Desktop/PA1/Code/SerializationUtils.o Size: 72520 Type: Parallel Time: 0.000604 ClientDescriptor: 7 ClientNumber: 1
+Sent: /home/asaikia/Desktop/PA1/Code/SerializationUtils.o Size: 72520 Type: Parallel Time: 0.000656 ClientDescriptor: 7 ClientNumber: 1
+Sent: /home/asaikia/Desktop/PA1/Code/SerializationUtils.o Size: 72520 Type: Parallel Time: 0.000183 ClientDescriptor: 7 ClientNumber: 1
+Sent: /home/asaikia/Desktop/PA1/Code/SerializationUtils.o Size: 72520 Type: Parallel Time: 0.000556 ClientDescriptor: 7 ClientNumber: 1
+Sent: /home/asaikia/Desktop/PA1/Code/SerializationUtils.o Size: 72520 Type: Parallel Time: 0.000536 ClientDescriptor: 7 ClientNumber: 1
+Sent: /home/asaikia/Desktop/PA1/Code/SerializationUtils.o Size: 72520 Type: Parallel Time: 0.000238 ClientDescriptor: 7 ClientNumber: 1
+Sent: /home/asaikia/Desktop/PA1/Code/SerializationUtils.o Size: 72520 Type: Parallel Time: 0.000624 ClientDescriptor: 7 ClientNumber: 1

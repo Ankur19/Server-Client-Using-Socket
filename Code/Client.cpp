@@ -3,7 +3,6 @@
 #include <netinet/in.h>
 #include <netdb.h>
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <errno.h>
@@ -15,6 +14,8 @@ using namespace std;
 
 void* connectToServer(void* tD);
 
+
+// Data structure to store thread data
 struct ThreadData{
 	int clientDescriptor;
     int port;
@@ -28,55 +29,75 @@ struct ThreadData{
 
 int main(int argc, const char* argv[])
 {
+    // Instantiate some variables
     int clientSocket = 0,n = 0;
     
+    // Get user input
     int port = stoi(argv[1]);
     int folderIndex = stoi(argv[2]);
     int automated = stoi(argv[3]);
 
+    // Instantiate a thread list & a thread data list
     pthread_t threads[1];
-    vector<ThreadData*> threadDataList(1, new ThreadData());
+    ThreadData* td = new ThreadData();
+    vector<ThreadData*> threadDataList{td};
 
+    // Loop over as many threads as we want. Hardcoding it to 1 because now we consider one client as a single process.
+    // Open a new terminal and run-client to create a new client
     for(int i = 0; i<1;i++){
         threadDataList[i]->port = port;
         threadDataList[i]->threadNum = folderIndex;
         threadDataList[i]->automated = automated;
+
+        // Create thread and call connectToServer Method
         n = pthread_create(&threads[i], NULL, connectToServer, (void*)threadDataList[i]);
         if (n) {
 			cout << "Error:unable to create thread," << n << endl;
 			exit(-1);
 		};
     }
+
+    // Wait for thread to finish execution
     for(pthread_t& pt: threads){
         pthread_join(pt, NULL);
     }
-    return 0;
+
+    // Delete the data structure
+    delete threadDataList[0];
+    exit(0);
 }
 
 void* connectToServer(void* tD){
+    // Method Param
     ThreadData* threadData = (ThreadData*)tD;
     
-    int clientSocket, threadNum, n = 0, port;
+    // Instantiate variables
+    int clientSocket, threadNum, n = 0, port = 0;
     string tempString, newFileLocation;
     vector<int> files{};
     bool isValid;
     FileUtils::FileList f;
-
-    threadNum = threadData->threadNum;
     struct sockaddr_in ipOfServer;
+
+    // Get the threadNumber (Or in this case this is the FolderIndex)
+    threadNum = threadData->threadNum;
+    // Get the port
     port = threadData->port;
+    // Create a directory names ClientFolder_FolderIndex
     n = mkdir((FileUtils::getPwd() + "/ClientFolder_" + to_string(threadNum)).c_str(), 0777);
 
+    // Create Socket
     if((clientSocket = socket(AF_INET, SOCK_STREAM, 0))< 0)
     {
         printf("Socket not created \n");
         pthread_exit(NULL);
         return nullptr;
     }
-    ipOfServer.sin_family = AF_INET;
-    ipOfServer.sin_port = htons(port);
-    ipOfServer.sin_addr.s_addr = inet_addr(LOCALHOST);
+    ipOfServer.sin_family = AF_INET;     // Ipv4
+    ipOfServer.sin_port = htons(port); // Port provided by user
+    ipOfServer.sin_addr.s_addr = inet_addr(LOCALHOST); // Localhost=127.0.0.1
 
+    // Connect to server
     if((n = connect(clientSocket, (struct sockaddr *)&ipOfServer, sizeof(ipOfServer)))<0)
     {
         printf("Connection failed due to port and ip problems\n");
@@ -84,13 +105,16 @@ void* connectToServer(void* tD){
         return nullptr;
     }
 
+    // Receive the file list from server
     TransferUtils::receiveFile(tempString, clientSocket);
 
+    // Deserialize the files list and store in f
     SerializationUtils::deserializeFileList(tempString, f);
     threadData->f = &f;
     
+    // If automated we only download 10 files and based on value of n, download then sequentially or parallely
     if(threadData->automated){
-        //Always parallel
+        // sequential
         n = 1;
         // Parallel
         if(threadData->automated==2)
@@ -101,14 +125,16 @@ void* connectToServer(void* tD){
         }
     }
     else{
+        // Print out the files in folder
         cout << "Files in the folder: " << endl;
         for(int i=0; i<f.numFiles; i++){
             cout << '\t' << i+1 << '\t' << f.files[i] << endl;
         }
-
         cout << endl;
         cout << "Which files do you need?" << endl;
         cout << "Input file numbers with spaces in between." << endl;
+
+        // Read input and store file Numbers in files list
         while(1){
             tempString = "";
             getline(cin, tempString);
@@ -128,8 +154,12 @@ void* connectToServer(void* tD){
             if(isValid)
                 break;
         }
+
+        // Ask user whether to download then sequentially or parallely
         cout << "How do you want to download the files?" << endl;
         cout << "1: Serially, 2: Parallelly" << endl;
+
+        // Read input from user
         while(1){
             cin >> n;
             if(n==1 || n==2){
@@ -141,18 +171,24 @@ void* connectToServer(void* tD){
         }
     }
     
-    // Number of Files
+    // Send the number of files to download to server
     TransferUtils::sendSize(files.size(), clientSocket);
-    // Serially or parallely
+    // Also send an indicator whether to download files serially or parallely
     TransferUtils::sendSize(n, clientSocket);
+
+    // Instantiate some variables to validate Md5's and to determine which files to redownload
     string oldMd5 = "";
     string newMd5 = "";
     vector<int> filesToRedownload;
     struct stat newFileStat;
     bool redownload = true;
+    clock_t beginTime;
+
+    // This is the condition for sequential downloads
     if(n==1){
         while(!files.empty() && redownload){
             redownload = false;
+            beginTime = clock();
             for(int i: files){
                 filesToRedownload = vector<int>{};
                 
@@ -173,6 +209,7 @@ void* connectToServer(void* tD){
                     cout << "Md5's don't match for file: " << newFileLocation << endl;
                 }
             }
+            cout << "Received files in: " << (float)(clock()-beginTime)/CLOCKS_PER_SEC << " milli seconds" << endl;
             files = filesToRedownload;
             if(threadData->automated){
                 TransferUtils::printToFile(to_string(files.size()), "error.txt");

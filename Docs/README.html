@@ -1,0 +1,74 @@
+<html><head><style>body {
+   color: black;
+}
+</style></head><body><h2 id="cs-550-programming-assignment-1">CS-550 Programming Assignment 1</h2>
+<h4 id="ankur-saikia-a20445640-">Ankur Saikia (A20445640)</h4>
+<hr>
+<h3 id="dependencies">Dependencies</h3>
+<ul>
+<li>gcc 9+</li>
+<li>gnome-terminal (default for ubuntu)</li>
+</ul>
+<hr>
+<h3 id="how-to-run-">How to run?</h3>
+<ul>
+<li><code>VARIABLES.h</code> contains <strong>MAX_CLIENTS</strong> which is set to 1024 by default but can be set to limited amounts like 64 if we want limited clients</li>
+<li>In the <code>/Code</code> folder run the below comand to clean up existing compiled files<pre><code class="lang-bash"><span class="hljs-attribute">  make clean</span>
+</code></pre>
+</li>
+<li>Now to compile the code run the below commmand<pre><code class="lang-bash">  <span class="hljs-keyword">make</span> <span class="hljs-keyword">all</span>
+</code></pre>
+</li>
+<li>Provide execute permission to the <code>test.sh</code> script by running the below command<pre><code class="lang-bash">  chmod +x <span class="hljs-keyword">test</span>.<span class="hljs-keyword">sh</span>
+</code></pre>
+</li>
+<li>Run the script using the below command<pre><code class="lang-bash">  ./<span class="hljs-keyword">test</span>.<span class="hljs-keyword">sh</span>
+</code></pre>
+</li>
+<li>The script would ask for user inputs to the below questions<ul>
+<li>Generate large (500 mb) file?</li>
+<li>How many clients?</li>
+<li>Which port?</li>
+<li>Automated? This will make the client not ask for files to download and will download all files.</li>
+</ul>
+</li>
+<li>The files would be downloaded to folder with name like ClientFolder_{<strong>clientNumber</strong>}</li>
+<li>To delete the folders and their respective files after testing run the <code>folderRemove.sh</code> script with the number of folders as input.<pre><code class="lang-bash">  chmod +x folderDelete<span class="hljs-selector-class">.sh</span>
+  ./folderDelete<span class="hljs-selector-class">.sh</span> <span class="hljs-number">8</span>     <span class="hljs-comment">// Here 8 is the number of client folders to delete</span>
+</code></pre>
+</li>
+</ul>
+<hr>
+<h3 id="for-more-customization">For more customization</h3>
+<ul>
+<li>For better granularity, we can manually start and run the server and individual clients using <code>MAKE</code></li>
+<li>Run the below command to start the server using own port number<pre><code class="lang-bash">  make <span class="hljs-keyword">run</span><span class="bash">-server PORT={ portNumber }</span>
+</code></pre>
+</li>
+<li>In another terminal start a client using the below command<pre><code class="lang-bash">  <span class="hljs-attribute">make</span> run-client PORT={ <span class="hljs-attribute">portNumber</span> } FOLDER_INDEX={ <span class="hljs-attribute">folderIndex</span> } AUTO={ <span class="hljs-attribute">automated</span> }
+</code></pre>
+</li>
+<li>The options for <code>run-client</code> are as under<ul>
+<li>The  <em>PORT</em>  has to be same as that to the server</li>
+<li>The  <em>FOLDER_INDEX</em>  value would set the directory to save the new files. e.g. <strong>FOLDER_INDEX=1</strong> would save the files in  <em>/ClientFolder_1/</em>  folder</li>
+<li>The  <em>AUTO</em>  tag is for automated downloads of all files. Seting this to <strong>0</strong> would make the program ask for which files to download and whether to download them parallely or serially. </li>
+<li><em>AUTO</em> tag has three options <strong>[0: No, 1: Sequential, 2: Parallel]</strong></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="scaling-from-8-clients-to-64-clients">Scaling from 8 clients to 64 clients</h3>
+<ul>
+<li>To run the scaling script we need to give execute peermission to two bash scripts<pre><code class="lang-bash">  <span class="hljs-selector-tag">chmod</span> +<span class="hljs-selector-tag">x</span> <span class="hljs-selector-tag">folderRemove</span><span class="hljs-selector-class">.sh</span>
+  <span class="hljs-selector-tag">chmod</span> +<span class="hljs-selector-tag">x</span> <span class="hljs-selector-tag">stepTest</span><span class="hljs-selector-class">.sh</span>
+</code></pre>
+</li>
+<li>After execute permissions we need to run the script<pre><code class="lang-bash">  ./stepTest.<span class="hljs-keyword">sh</span>
+</code></pre>
+</li>
+<li>This script asks for a single user input which is whether to download files in sequence or in parallel</li>
+<li>Once this is done, it would automatically spin up the server and clients in bursts</li>
+<li>The output times get stored inside <code>/Times</code> and the number of files with Md5 errors get stored inside <code>/Errors</code></li>
+<li>Additionally the server output gets stored in <code>serverOutput.txt</code></li>
+</ul>
+</body></html>

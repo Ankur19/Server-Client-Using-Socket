@@ -13,7 +13,7 @@ string SerializationUtils::serializeFileList(FileUtils::FileList& f){
 
 void SerializationUtils::deserializeFileList(string& fileList, FileUtils::FileList& f){
     istringstream ss(fileList);
-    string temp;
+    string temp = "";
     bool first = true;
     int i = 0;
     while(getline(ss, temp, '|')){
@@ -35,6 +35,7 @@ void SerializationUtils::deserializeFileList(string& fileList, FileUtils::FileLi
         }
         i++;
     }
+    f.files.pop_back();
 }
 
 void SerializationUtils::rtrim(string &s) {
