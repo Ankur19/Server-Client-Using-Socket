@@ -1,0 +1,197 @@
+./server 50055
+Server started...
+Listening on: 127.0.0.1:50055
+PWD: /home/asaikia/Desktop/PA1/Code
+Client Number: 4
+File Info sent
+Waiting for response from client
+Received file number: 1
+File sent to client
+Received file number: 2
+File sent to client
+Received file number: 3
+File sent to client
+Received file number: 4
+File sent to client
+Received file number: 5
+File sent to client
+Received file number: 6
+File sent to client
+Received file number: 7
+File sent to client
+Received file number: 8
+File sent to client
+Received file number: 9
+File sent to client
+Received file number: 10
+File sent to client
+Sent files in: 0.002822  seconds
+Client Number: 5
+File Info sent
+Waiting for response from client
+Received file number: 1
+File sent to client
+Received file number: 2
+File sent to client
+Received file number: 3
+File sent to client
+Received file number: 4
+File sent to client
+Received file number: 5
+File sent to client
+Received file number: 6
+File sent to client
+Received file number: 7
+File sent to client
+Received file number: 8
+File sent to client
+Received file number: 9
+File sent to client
+Received file number: 10
+File sent to client
+Sent files in: 0.003128  seconds
+Client Number: 4
+File Info sent
+Waiting for response from client
+Received file number: 1
+File sent to client
+Received file number: 2
+File sent to client
+Received file number: 3
+File sent to client
+Received file number: 4
+File sent to client
+Received file number: 5
+File sent to client
+Received file number: 6
+File sent to client
+Received file number: 7
+File sent to client
+Received file number: 8
+File sent to client
+Received file number: 9
+File sent to client
+Received file number: 10
+File sent to client
+Sent files in: 0.003522  seconds
+Client Number: 6
+File Info sent
+Waiting for response from client
+Received file number: 1
+File sent to client
+Received file number: 2
+File sent to client
+Received file number: 3
+File sent to client
+Received file number: 4
+File sent to client
+Received file number: 5
+File sent to client
+Received file number: 6
+File sent to client
+Received file number: 7
+File sent to client
+Received file number: 8
+File sent to client
+Received file number: 9
+File sent to client
+Received file number: 10
+File sent to client
+Sent files in: 0.002843  seconds
+Client Number: 5
+File Info sent
+Waiting for response from client
+Received file number: 1
+File sent to client
+Received file number: 2
+File sent to client
+Received file number: 3
+File sent to client
+Received file number: 4
+File sent to client
+Received file number: 5
+File sent to client
+Received file number: 6
+File sent to client
+Received file number: 7
+File sent to client
+Received file number: 8
+File sent to client
+Received file number: 9
+File sent to client
+Received file number: 10
+File sent to client
+Sent files in: 0.003154  seconds
+Client Number: 5
+File Info sent
+Waiting for response from client
+Received file number: 1
+File sent to client
+Received file number: 2
+File sent to client
+Received file number: 3
+File sent to client
+Received file number: 4
+File sent to client
+Received file number: 5
+File sent to client
+Received file number: 6
+File sent to client
+Received file number: 7
+File sent to client
+Received file number: 8
+File sent to client
+Received file number: 9
+File sent to client
+Received file number: 10
+File sent to client
+Sent files in: 0.002285  seconds
+Client Number: 4
+File Info sent
+Waiting for response from client
+Received file number: 1
+File sent to client
+Received file number: 2
+File sent to client
+Received file number: 3
+File sent to client
+Received file number: 4
+File sent to client
+Received file number: 5
+File sent to client
+Received file number: 6
+File sent to client
+Received file number: 7
+File sent to client
+Received file number: 8
+File sent to client
+Received file number: 9
+File sent to client
+Received file number: 10
+File sent to client
+Sent files in: 0.002115  seconds
+Client Number: 7
+File Info sent
+Waiting for response from client
+Received file number: 1
+File sent to client
+Received file number: 2
+File sent to client
+Received file number: 3
+File sent to client
+Received file number: 4
+File sent to client
+Received file number: 5
+File sent to client
+Received file number: 6
+File sent to client
+Received file number: 7
+File sent to client
+Received file number: 8
+File sent to client
+Received file number: 9
+File sent to client
+Received file number: 10
+File sent to client
+Sent files in: 0.002028  seconds
+
