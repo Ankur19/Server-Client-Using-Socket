@@ -19,6 +19,9 @@ if [ $needed -eq 2 ]; then
     dd if=/dev/zero of=file.out bs=1MB count=500
 fi
 
+make clean
+make all
+
 gnome-terminal --working-directory $PWD --tab -e "make run-server PORT=$port" 
 
 for ((i=0;i<$numClients;i++));
